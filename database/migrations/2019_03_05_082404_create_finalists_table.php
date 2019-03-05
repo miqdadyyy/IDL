@@ -14,8 +14,8 @@ class CreateFinalistsTable extends Migration
     public function up()
     {
         Schema::create('finalists', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('id_peserta');
+            $table->increments('id');
+            $table->integer('id_peserta')->unsigned();
             $table->integer('nilai')->nullable();
             $table->timestamps();
         });

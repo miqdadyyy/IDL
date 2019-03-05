@@ -14,9 +14,9 @@ class CreateSubmissionsTable extends Migration
     public function up()
     {
         Schema::create('submissions', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('id_peserta');
-            $table->bigInteger('id_kategori');
+            $table->increments('id');
+            $table->integer('id_peserta')->unsigned();
+            $table->integer('id_kategori')->unsigned();
             $table->string('judul');
             $table->string('file_path');
             $table->timestamps();
