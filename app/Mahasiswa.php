@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property Peserta[] $pesertas
+ * @property Tim[] $tims
  */
 class Mahasiswa extends Model
 {
@@ -41,11 +42,35 @@ class Mahasiswa extends Model
      */
     protected $fillable = ['nama', 'email', 'no_hp', 'created_at', 'updated_at'];
 
+    public static function createMahasiswa($nim, $nama, $email, $no_hp){
+        $mahasiswa = Mahasiswa::find($nim);
+        if($mahasiswa != null){
+            return $mahasiswa;
+        }
+
+        $mahasiswa = Mahasiswa::create([
+            'nim' => $nim,
+            'nama' => $nama,
+            'email' => $email,
+            'no_hp' => $no_hp
+        ]);
+
+        return $mahasiswa;
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function pesertas()
     {
         return $this->hasMany('App\Peserta', 'nim', 'nim');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tims()
+    {
+        return $this->hasMany('App\Tim', 'ketua_tim', 'nim');
     }
 }

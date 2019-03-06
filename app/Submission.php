@@ -6,35 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
- * @property int $id_peserta
- * @property int $id_kategori
+ * @property int $id_tim
  * @property string $judul
  * @property string $file_path
  * @property string $created_at
  * @property string $updated_at
- * @property Kategori $kategori
- * @property Peserta $peserta
+ * @property string $deleted_at
+ * @property Tim $tim
  */
 class Submission extends Model
 {
     /**
      * @var array
      */
-    protected $fillable = ['id_peserta', 'id_kategori', 'judul', 'file_path', 'created_at', 'updated_at'];
+    protected $fillable = ['id_tim', 'judul', 'file_path', 'created_at', 'updated_at', 'deleted_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function kategori()
+    public function tim()
     {
-        return $this->belongsTo('App\Kategori', 'id_kategori');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function peserta()
-    {
-        return $this->belongsTo('App\Peserta', 'id_peserta');
+        return $this->belongsTo('App\Tim', 'id_tim');
     }
 }

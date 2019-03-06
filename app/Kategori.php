@@ -9,15 +9,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id_ormawa
  * @property string $nama_kategori
  * @property Ormawa $ormawa
- * @property Peserta[] $pesertas
- * @property Submission[] $submissions
+ * @property Tim[] $tims
  */
 class Kategori extends Model
 {
     /**
      * @var array
      */
-    protected $fillable = ['id_ormawa', 'nama_kategori'];
+    protected $fillable = ['id_ormawa', 'nama_kategori', 'kategori'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -30,16 +29,8 @@ class Kategori extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function pesertas()
+    public function tims()
     {
-        return $this->hasMany('App\Peserta', 'id_kategori');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function submissions()
-    {
-        return $this->hasMany('App\Submission', 'id_kategori');
+        return $this->hasMany('App\Tim', 'id_kategori');
     }
 }

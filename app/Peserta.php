@@ -7,28 +7,34 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property int $id
  * @property string $nim
- * @property int $id_kategori
- * @property string $nama_tim
+ * @property int $id_tim
  * @property string $created_at
  * @property string $updated_at
- * @property Kategori $kategori
+ * @property string $deleted_at
+ * @property Tim $tim
  * @property Mahasiswa $mahasiswa
  * @property Finalist[] $finalists
- * @property Submission[] $submissions
  */
 class Peserta extends Model
 {
     /**
      * @var array
      */
-    protected $fillable = ['nim', 'id_kategori', 'nama_tim', 'created_at', 'updated_at'];
+    protected $fillable = ['nim', 'id_tim', 'created_at', 'updated_at', 'deleted_at'];
+
+    public static function linkPesertaToTim($nim, $id_tim){
+        Peserta::create([
+            'nim' => $nim,
+            'id_tim' => $id_tim
+        ]);
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function kategori()
+    public function tim()
     {
-        return $this->belongsTo('App\Kategori', 'id_kategori');
+        return $this->belongsTo('App\Tim', 'id_tim');
     }
 
     /**
@@ -44,14 +50,6 @@ class Peserta extends Model
      */
     public function finalists()
     {
-        return $this->hasMany('App\Finalist', 'id_peserta');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function submissions()
-    {
-        return $this->hasMany('App\Submission', 'id_peserta');
+        return $this->hasMany('App\Finalist', 'id_tim');
     }
 }
