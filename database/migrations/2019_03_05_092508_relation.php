@@ -38,6 +38,10 @@ class Relation extends Migration
         Schema::table('finalists', function(Blueprint $table) {
             $table->foreign('id_peserta')->references('id')->on('pesertas');
         });
+
+        Schema::table('posts', function(Blueprint $table) {
+            $table->foreign('id_user')->references('id')->on('users');
+        });
     }
 
     /**
