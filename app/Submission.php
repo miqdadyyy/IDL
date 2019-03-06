@@ -21,6 +21,16 @@ class Submission extends Model
      */
     protected $fillable = ['id_tim', 'judul', 'file_path', 'created_at', 'updated_at', 'deleted_at'];
 
+    public static function createSubmission($id_tim, $judul, $path){
+        $submission = Submission::create([
+            'id_tim' => $id_tim,
+            'judul' => $judul,
+            'file_path' => $path
+        ]);
+
+        return $submission;
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

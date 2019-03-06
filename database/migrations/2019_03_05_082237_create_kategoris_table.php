@@ -17,6 +17,7 @@ class CreateKategorisTable extends Migration
             $table->increments('id');
             $table->integer('id_ormawa')->unsigned();
             $table->string('nama_kategori');
+            $table->string('kategori');
         });
     }
 
