@@ -17,31 +17,33 @@ class Relation extends Migration
             $table->foreign('id_ormawa')->references('id')->on('ormawas');
         });
 
+        Schema::table('posts', function(Blueprint $table) {
+            $table->foreign('id_user')->references('id')->on('users');
+        });
 
         Schema::table('kategoris', function(Blueprint $table) {
             $table->foreign('id_ormawa')->references('id')->on('ormawas');
         });
 
-
-        Schema::table('submissions', function(Blueprint $table) {
-            $table->foreign('id_peserta')->references('id')->on('pesertas');
+        Schema::table('tims', function(Blueprint $table) {
             $table->foreign('id_kategori')->references('id')->on('kategoris');
+            $table->foreign('ketua_tim')->references('nim')->on('mahasiswas');
         });
 
+        Schema::table('submissions', function(Blueprint $table) {
+            $table->foreign('id_tim')->references('id')->on('tims');
+        });
 
         Schema::table('pesertas', function(Blueprint $table) {
             $table->foreign('nim')->references('nim')->on('mahasiswas');
-            $table->foreign('id_kategori')->references('id')->on('kategoris');
+            $table->foreign('id_tim')->references('id')->on('tims');
         });
-
 
         Schema::table('finalists', function(Blueprint $table) {
-            $table->foreign('id_peserta')->references('id')->on('pesertas');
+            $table->foreign('id_tim')->references('id')->on('pesertas');
         });
 
-        Schema::table('posts', function(Blueprint $table) {
-            $table->foreign('id_user')->references('id')->on('users');
-        });
+
     }
 
     /**

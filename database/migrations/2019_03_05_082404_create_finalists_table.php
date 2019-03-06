@@ -15,9 +15,10 @@ class CreateFinalistsTable extends Migration
     {
         Schema::create('finalists', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_peserta')->unsigned();
+            $table->integer('id_tim')->unsigned();
             $table->integer('nilai')->nullable();
             $table->timestamps();
+            $table->dateTime('deleted_at')->nullable();
         });
     }
 

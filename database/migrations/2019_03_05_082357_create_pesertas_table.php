@@ -16,9 +16,9 @@ class CreatePesertasTable extends Migration
         Schema::create('pesertas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nim');
-            $table->integer('id_kategori')->unsigned();
-            $table->string('nama_tim')->unique();
+            $table->integer('id_tim')->unsigned();
             $table->timestamps();
+            $table->dateTime('deleted_at')->nullable();
         });
     }
 

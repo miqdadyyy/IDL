@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('description');
             $table->integer('id_user')->unsigned();
             $table->timestamps();
+            $table->dateTime('deleted_at')->nullable();
         });
     }
 
