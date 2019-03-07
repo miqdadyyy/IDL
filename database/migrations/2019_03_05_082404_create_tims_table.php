@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubmissionsTable extends Migration
+class CreateTimsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateSubmissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('submissions', function (Blueprint $table) {
+        Schema::create('tims', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_tim')->unsigned();
-            $table->string('judul');
-            $table->string('file_path');
+            $table->integer('id_kategori')->unsigned();
+            $table->string('nama_tim')->unique();
+            $table->string('ketua_tim');
+            $table->string('submissionid', 32);
             $table->timestamps();
             $table->dateTime('deleted_at')->nullable();
         });
@@ -30,6 +31,6 @@ class CreateSubmissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('submissions');
+        //
     }
 }
