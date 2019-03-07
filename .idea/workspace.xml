@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d386a0c3-7f9a-4014-b92f-7ec5339834bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Submission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Submission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_05_082237_create_kategoris_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_05_082237_create_kategoris_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/KategorisTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/KategorisTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mails/submission.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,30 +18,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+        <entry file="file://$PROJECT_DIR$/app/Mail/SubmissionMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#40#59#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="248">
+              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Submission.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+            <state relative-caret-position="465">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/mails/submission.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -56,7 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_05_082342_create_ormawas_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
@@ -89,8 +84,11 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_03_05_082237_create_kategoris_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/KategorisTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Submission.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Mail/SubmissionMail.php" />
+        <option value="$PROJECT_DIR$/resources/views/mails/submission.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -216,23 +214,7 @@
               <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDL" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDL" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IDL" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
+              <item name="Mail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
@@ -266,6 +248,12 @@
               <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
               <item name="IDL" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDL" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -318,16 +306,15 @@
       <updated>1551773976464</updated>
       <workItem from="1551773977729" duration="5049000" />
       <workItem from="1551785364167" duration="16000" />
-      <workItem from="1551833731959" duration="15508000" />
+      <workItem from="1551833731959" duration="19597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20573000" />
+    <option name="totallyTimeSpent" value="24662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19393939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -357,13 +344,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env.example">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -590,16 +570,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="198">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="285">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="44" />
           <folding>
             <element signature="e#40#59#0#PHP" expanded="true" />
           </folding>
@@ -610,6 +591,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mails/submission.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Mail/SubmissionMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>

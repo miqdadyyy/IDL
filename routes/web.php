@@ -36,17 +36,14 @@ Route::get('/kompetisi/{kategori}/submit', 'SubmissionController@getPageSubmit')
 Route::get('/kompetisi/{kategori}/submit/store', 'SubmissionController@submitFile')->name('kompetisi.submit.store');
 
 Route::get('/test', function (){
-    $kategoris = Kategori::select('kategori')->where('id_ormawa', Auth::user()->id_ormawa)->get();
 
-    $allow = false;
-    return $kategoris;
+    $data = new stdClass();
+    $data->kategori = 'Pengembangan Perangkat Lunak';
+    $data->submission_code = 'loremipsumdolorsitamet';
+    $data->sender = ucfirst(Auth::user()->name);
+    $data->receiver = 'Miqdad Yanuar';
 
-    foreach ($kategoris as $kategori){
-        return $kategoris;
-//        if($kategori->kategori == $request->route()->parameter('kategori')){
-//            $allow = true;
-//        }
-    }
+    \Illuminate\Support\Facades\Mail::to('miqdad.farcha@gmail.com')->send(new \App\Mail\SubmissionMail($data));
 });
 
 Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' =>['auth']], function(){
