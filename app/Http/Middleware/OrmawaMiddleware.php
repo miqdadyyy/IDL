@@ -31,7 +31,7 @@ class OrmawaMiddleware
         if($allow){
             return $next($request);
         } else {
-            return redirect()->route('admin.index');
+            return redirect()->route('admin.dashboard');
         }
 
     }

@@ -23,8 +23,6 @@ Route::get('/register', function(){
     return redirect('/');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/post/{post}', 'PostController@show')->name('post.show');
 
 Route::get('/kompetisi/{kategori}', 'KompetisiController@getPagesByCategory')->name('kompetisi.index');
@@ -37,20 +35,12 @@ Route::get('/kompetisi/{kategori}/submit/store', 'SubmissionController@submitFil
 
 Route::get('/test', function (){
 
-    $data = new stdClass();
-    $data->kategori = 'Pengembangan Perangkat Lunak';
-    $data->submission_code = 'loremipsumdolorsitamet';
-    $data->sender = ucfirst(Auth::user()->name);
-    $data->receiver = 'Miqdad Yanuar';
-
-    \Illuminate\Support\Facades\Mail::to('miqdad.farcha@gmail.com')->send(new \App\Mail\SubmissionMail($data));
+    return view('admin.pages.test');
 });
 
 Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' =>['auth']], function(){
 
-    Route::get('/', function (){
-        return "THIS IS INDEX";
-    })->name('index');
+    Route::get('/', 'AdminController@index')->name('dashboard');
 
     Route::group(['middleware' => ['ormawa']], function (){
         /* TIM */
@@ -71,6 +61,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
 
     /* POST */
 
+//    Route::get('post/ajax/', '\App\Http\Controllers\AjaxController@getPost');
     // READ
     Route::get('post/', 'PostController@index')->name('post.index');
     // CREATE
@@ -78,8 +69,8 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::post('post/store', 'PostController@store')->name('post.store');
     // EDIT
     Route::get('post/{post}/edit', 'PostController@edit')->name('post.edit');
-    Route::post('post/update', 'PostController@update')->name('post.update');
+    Route::post('post/update/{post}', 'PostController@update')->name('post.update');
     // DELETE
-    Route::post('post/destroy', 'PostController@destroy')->name('post.destroy');
+    Route::post('post/destroy/{post}', 'PostController@destroy')->name('post.destroy');
 
 });

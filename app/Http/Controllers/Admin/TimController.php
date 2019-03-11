@@ -18,7 +18,7 @@ class TimController extends Controller
     public function index($id_kategori)
     {
         // TODO : Return view with datatable
-        return $id_kategori;
+        return view('admin.pages.kategori_penyisihan_1');
     }
 
     /**
