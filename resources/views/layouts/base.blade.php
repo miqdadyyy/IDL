@@ -21,27 +21,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
   <style media="screen">
-  .logo{
-    width:150px;
-    height:55px;
-    position:relative;
-    margin-bottom:0;
-    transition:all 0.3s;
-    background-image: url(img/IDL.png);
-    background-repeat: no-repeat;
-    background-attachment: contain;
-    background-size:contain;
-    margin: 5px 0 5px 0;
-  }
-  .logo-w{
-    background-image: url(img/IDL-w.png);
-  }
-  /* @media only screen and (max-width: 768px) {
-    .logo{
-      width: 60px;
-      background-image: url(img/logo_e.png);
-    }
-  } */
   </style>
 
   @yield('css')
@@ -99,20 +78,35 @@
     $(window).scroll(function(){
       scrollTop = $(window).scrollTop();
        $('.counter').html(scrollTop);
-      if (scrollTop >= 250) {
+      if (scrollTop >= 200) {
         $('#nav').addClass('unscroll');
         $('#logo-w').addClass('logo-w');
-      } else if (scrollTop < 250) {
+      } else if (scrollTop < 200) {
         if($(window).width()>770){
           $('#nav').removeClass('unscroll');
           $('#logo-w').removeClass('logo-w');
         }
 
       }
-
     });
-
     });
+    </script>
+    <script>
+    function dropdown() {
+      document.getElementById("childDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
     </script>
     </body>
 </html>

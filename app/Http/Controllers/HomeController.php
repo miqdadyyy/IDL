@@ -25,4 +25,24 @@ class HomeController extends Controller
     {
         return view('pages.home');
     }
+    public function getIsicPage()
+    {
+      return view('pages.isic');
+    }
+    public function getItecPage()
+    {
+      return view('pages.itec');
+    }
+    public function getLaosarenaPage()
+    {
+      return view('pages.laosarena');
+    }
+    public function getPkmgoPage()
+    {
+      return view('pages.pkmgo');
+    }
+    public function getSubmitPage()
+    {
+      return view('pages.submit');
+    }
 }

@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/isic', 'HomeController@getIsicPage')->name('isic');
+Route::get('/itec', 'HomeController@getItecPage')->name('itec');
+Route::get('/laos-arena', 'HomeController@getLaosarenaPage')->name('laosarena');
+Route::get('/pkm-go', 'HomeController@getPkmgoPage')->name('pkmgo');
+Route::get('/submit', 'HomeController@getSubmitPage')->name('submit');
