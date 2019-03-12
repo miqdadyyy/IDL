@@ -33,8 +33,12 @@
 <script src="{{ asset('assets/admin/js/popper.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/main.js') }}"></script>
+<script src="{{ asset('assets/admin/js/plugins/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/admin/js/plugins/dataTables.bootstrap.min.js') }}"></script>
 <!-- The javascript plugin to display page loading on top-->
 <script src="{{ asset('assets/admin/js/plugins/pace.min.js') }}"></script>
+
+
 <!-- Page specific javascripts-->
 <script type="text/javascript" src="{{ asset('assets/admin/js/plugins/chart.js') }}"></script>
 @yield('js')

@@ -7,7 +7,7 @@
 {{--Custom CSS--}}
 
 @section('css')
-
+    {{--<link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">--}}
 @endsection
 
 {{--App Title--}}
@@ -22,14 +22,14 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="tile-body">
-                    <table class="table table-hover table-bordered" id="sampleTable">
+                    <table class="table table-hover table-bordered" id="tim-table">
                         <thead>
                         <tr>
                             <th width="5%">No</th>
-                            <th width="25%">Nama Tim</th>
-                            <th width="40%">Desc</th>
-                            <th width="7%">Author</th>
-                            <th width="13%">Created at</th>
+                            <th width="15%">Nama Tim</th>
+                            <th width="20%">Ketua Tim</th>
+                            <th width="%">Anggota</th>
+                            <th width="10%">Submission</th>
                             <th width="10%">Action</th>
                         </tr>
                         </thead>
@@ -39,24 +39,26 @@
                         </tbody>
 
                     </table>
-                    <form action="{{ route('admin.post.destroy', ['post' => -1]) }}" method="post" id="delete-form">
+                    <form action="{{ route('admin.tim.destroy', ['tim' => -1, 'kategori' => $id_kategori]) }}" method="post" id="delete-form">
                         @csrf
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 @endsection
 
 {{--Custom Javascript--}}
 
 @section('js')
+    {{--<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>--}}
     <script>
-        function deletePost($id){
-            var c = confirm("Are you sure delete this post?");
-            if(c == true){
+        function deletePost(id) {
+            var c = confirm("Are you sure delete this tim?");
+            if (c == true) {
                 url = $('#delete-form').attr('action');
-                url = url.substring(0, url.length-2) + $id;
+                url = url.substring(0, url.length - 2) + id;
                 url = $('#delete-form').attr('action', url);
                 // return;
                 $('#delete-form').submit();
@@ -65,4 +67,42 @@
             }
         }
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#tim-table').DataTable({
+                processing: false,
+                serverSide: true,
+                responsive: true,
+                ajax: "{{ route('admin.ajax.penyisihan1', ['kategori' => $id_kategori]) }}",
+                columns: [
+                    {data: 'no'},
+                    {data: 'nama_tim'},
+                    {data: 'mahasiswa.nama'},
+                    {data: 'anggota'},
+                    {
+                        data: 'submission',
+                        render: function (data, type, row) {
+                            if(data != null){
+                                return '<a href="/admin/ajax/download/'+data+'" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
+                            } else{
+                                return "Belum Melakukan Submission";
+                            }
+
+                        }
+                    },
+                    {
+                        data: 'id',
+                        render: function(data, type, row){
+                            content = "<a href=\"edit/ "+ data +"\" class=\"btn btn-info\">Edit</a>";
+                            content += "<button onclick=\"deletePost(" + data +")\" class=\"btn btn-danger\">Delete</button>";
+                            return content;
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
 @endsection

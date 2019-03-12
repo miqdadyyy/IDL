@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property int $id
@@ -20,10 +21,11 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Tim extends Model
 {
+    use SoftDeletes;
     /**
      * @var array
      */
-    protected $fillable = ['id_kategori', 'ketua_tim', 'nama_tim', 'submissionid', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['id_kategori', 'ketua_tim', 'nama_tim', 'submissionid', 'babak', 'created_at', 'updated_at', 'deleted_at'];
 
     public static function createTim($id_kategori, $ketua_tim, $nama_tim){
         $tim = Tim::create([
@@ -34,6 +36,15 @@ class Tim extends Model
         ]);
 
         return $tim;
+    }
+
+    public static function deleteTim($id_kategori, $id){
+        $tim = Tim::with('pesertas')->findOrFail($id);
+        foreach ($tim->pesertas as $peserta){
+            Peserta::findOrFail($peserta->id)->delete();
+        }
+        $tim->delete();
+        return true;
     }
 
     /**

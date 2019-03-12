@@ -64,11 +64,11 @@
 
 @section('js')
     <script>
-        function deletePost($id){
+        function deletePost(id){
             var c = confirm("Are you sure delete this post?");
             if(c == true){
                 url = $('#delete-form').attr('action');
-                url = url.substring(0, url.length-2) + $id;
+                url = url.substring(0, url.length-2) + id;
                 url = $('#delete-form').attr('action', url);
                 // return;
                 $('#delete-form').submit();

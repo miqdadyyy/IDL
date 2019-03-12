@@ -3,22 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Kategori;
 use App\Mahasiswa;
 use App\Peserta;
 use App\Tim;
 use Illuminate\Http\Request;
 
-class TimController extends Controller
+class KompetisiPenyisihan1 extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id_kategori)
+    public function index($kategori)
     {
         // TODO : Return view with datatable
-        return view('admin.pages.kategori_penyisihan_1');
+        $id_kategori = Kategori::where('kategori', $kategori)->get()->first()->id;
+        return view('admin.pages.kategori_penyisihan_1', compact('id_kategori'));
     }
 
     /**
@@ -105,6 +107,7 @@ class TimController extends Controller
      */
     public function destroy($id_kategori, $id)
     {
-        return 'Destroy ' . $id_kategori . '_' . $id;
+        Tim::deleteTim($id_kategori, $id);
+        return redirect()->route('admin.tim.index');
     }
 }
