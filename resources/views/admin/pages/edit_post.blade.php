@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="tile">
                 <h3 class="tile-title">Create Post</h3>
-                <form method="post" action="{{ route('admin.post.update') }}">
+                <form method="post" action="{{ route('admin.post.update', ['post' => $post->id]) }}">
                     @csrf
                     <div class="form-group">
                         <label for="titlePost">Title Post</label>

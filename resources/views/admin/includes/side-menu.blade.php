@@ -18,7 +18,7 @@
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Kompetisi (Penyisihan 1)</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
                 @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
-                    <li><a class="treeview-item" href="{{ route('admin.tim.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
+                    <li><a class="treeview-item" href="{{ route('admin.penyisihan-1.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
                 @endforeach
             </ul>
         </li>
@@ -26,7 +26,7 @@
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Kompetisi (Penyisihan 2)</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
                 @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
-                    <li><a class="treeview-item" href="{{ route('admin.tim.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
+                    <li><a class="treeview-item" href="{{ route('admin.penyisihan-2.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
                 @endforeach
             </ul>
         </li>
@@ -34,9 +34,12 @@
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Kompetisi (Final)</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
                 @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
-                    <li><a class="treeview-item" href="{{ route('admin.tim.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
+                    <li><a class="treeview-item" href="{{ route('admin.final.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
                 @endforeach
             </ul>
         </li>
+        <li><a class="app-menu__item" href="{{ route('admin.mahasiswa.index') }}"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Mahasiswa</span></a></li>
+        <li><a class="app-menu__item" href="{{ route('admin.tim.index') }}"><i class="app-menu__icon fa fa-users"></i><span class="app-menu__label">Tim</span></a></li>
+
     </ul>
 </aside>

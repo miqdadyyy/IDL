@@ -9,7 +9,7 @@ use App\Peserta;
 use App\Tim;
 use Illuminate\Http\Request;
 
-class KompetisiPenyisihan1 extends Controller
+class KompetisiFinal extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,7 @@ class KompetisiPenyisihan1 extends Controller
     {
         // TODO : Return view with datatable
         $kategori = Kategori::where('kategori', $id_kategori)->get()->first();
-        return view('admin.pages.penyisihan_1', compact('kategori'));
+        return view('admin.pages.final', compact('kategori'));
     }
 
     /**
@@ -31,7 +31,9 @@ class KompetisiPenyisihan1 extends Controller
     public function create($id_kategori)
     {
         // TODO : Return view create
-        return 'Create ' . $id_kategori;
+        $kategori = Kategori::where('kategori', $id_kategori)->get()->first();
+        $tims = Tim::where('id_kategori', $kategori->id)->where('babak', '=', 2)->get();
+        return view('admin.pages.add_final', compact('kategori', 'tims'));
     }
 
     /**
@@ -42,27 +44,14 @@ class KompetisiPenyisihan1 extends Controller
      */
     public function store($id_kategori, Request $request)
     {
-        $mahasiswas = $request->mahasiswas;
+        $tims = $request->tims;
 
-        // TODO : Validation ????
-
-        $pesertas = [];
-
-        foreach ($mahasiswas as $mahasiswa){
-            $mhs = Mahasiswa::createMahasiswa($mahasiswa->nim, $mahasiswa->nama, $mahasiswa->email, $mahasiswa->no_hp);
-            array_push($pesertas, $mhs);
-        }
-
-        $tim = Tim::createTim($request->id_kategori, $pesertas[0], $request->nama_tim);
-
-        foreach ($pesertas as $peserta){
-            Peserta::linkPesertaToTim($peserta->nim, $tim->id);
+        foreach($tims as $tim){
+            Tim::updateKompetisi($tim, 3);
         }
 
         // TODO : return redirect with success
-
-        return redirect()->back();
-
+        return redirect()->route('admin.final.index', $id_kategori);
     }
 
     /**
@@ -107,9 +96,10 @@ class KompetisiPenyisihan1 extends Controller
      */
     public function destroy($id)
     {
-        if(Tim::deleteTim($id)){
-            return redirect()->back();
+        $tim = Tim::updateKompetisi($id, 2);
+        if($tim){
+            return redirect()->route('admin.final.index', compact('kategori'));
         }
-        return redirect()->back();
+        return redirect()->route('admin.final.index', compact('kategori'));
     }
 }

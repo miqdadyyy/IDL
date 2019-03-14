@@ -84,7 +84,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $title = $request->title;
-        $desc = $request->desc;
+        $desc = $request->description;
         $id = $post->id;
 
         $post = Post::updatePost($id, $title, $desc);

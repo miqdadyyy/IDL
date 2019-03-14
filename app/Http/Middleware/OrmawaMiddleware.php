@@ -28,9 +28,14 @@ class OrmawaMiddleware
             }
         }
 
+//        if(!$allow){
+//            $allow = Auth::user()->id_ormawa == Kategori::find($request->route()->parameter('kategori'))->id_ormawa;
+//        }
+
         if($allow){
             return $next($request);
         } else {
+//            return $next($request);
             return redirect()->route('admin.dashboard');
         }
 
