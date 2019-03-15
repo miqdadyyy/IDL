@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Post')
-@section('app-description', 'Create Post')
+@section('app-title', 'Edit tim')
+@section('app-description', '')
 
 {{--Content--}}
 

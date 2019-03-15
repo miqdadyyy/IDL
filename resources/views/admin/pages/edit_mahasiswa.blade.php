@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Post')
-@section('app-description', 'Create Post')
+@section('app-title', 'Edit Mahasiswa')
+@section('app-description', '')
 
 {{--Content--}}
 
@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <h3 class="tile-title">Edit Tim</h3>
+                <h3 class="tile-title">Edit Mahasiswa</h3>
                 <form method="post" action="{{ route('admin.mahasiswa.update', ['mahasiswa' => $mahasiswa->nim]) }}">
                     @csrf
                     @method('PATCH')

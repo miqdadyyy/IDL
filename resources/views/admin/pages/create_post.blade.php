@@ -2,7 +2,7 @@
 
 {{--Page Title--}}
 
-@section('title', 'Test TItle')
+@section('title', 'Post')
 
 {{--Custom CSS--}}
 
@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Post')
-@section('app-description', 'Create Post')
+@section('app-title', 'Tambah Post')
+@section('app-description', '')
 
 {{--Content--}}
 

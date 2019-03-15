@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Dashboard')
-@section('app-description', 'Dashboard description')
+@section('app-title', 'Identitas Tim')
+@section('app-description', '')
 
 {{--Content--}}
 

@@ -80,6 +80,8 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::get('ajax/tims', 'AjaxController@getTims')->name('ajax.tim');
     Route::get('ajax/download/{path}', 'AjaxController@downloadFile')->name('ajax.download');
 
+//    Route::get('ajax/gettims', 'AjaxController@getTimsData')->name('ajax.tims');
+
     // READ
     Route::get('post/', 'PostController@index')->name('post.index');
     // CREATE

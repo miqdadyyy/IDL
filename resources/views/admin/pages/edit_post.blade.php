@@ -21,15 +21,15 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <h3 class="tile-title">Create Post</h3>
+                <h3 class="tile-title">Edit Post</h3>
                 <form method="post" action="{{ route('admin.post.update', ['post' => $post->id]) }}">
                     @csrf
                     <div class="form-group">
-                        <label for="titlePost">Title Post</label>
+                        <label for="titlePost">Judul</label>
                         <input class="form-control" id="titlePost" type="text" aria-describedby="titleHelp" name="title"
                                placeholder="Enter Title" value="{{ $post->title }}">
                         <small class="form-text text-muted" id="titleHelp">
-                            For Post title
+                            Judul
                         </small>
                     </div>
 

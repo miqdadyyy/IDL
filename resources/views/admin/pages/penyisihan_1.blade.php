@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Dashboard')
-@section('app-description', 'Dashboard description')
+@section('app-title', 'Peserta ' . $kategori->nama_kategori)
+@section('app-description', 'Daftar peserta ' . $kategori->nama_kategori . ' tahap 1')
 
 {{--Content--}}
 

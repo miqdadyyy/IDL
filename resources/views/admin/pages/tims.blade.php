@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Dashboard')
-@section('app-description', 'Dashboard description')
+@section('app-title', 'Daftar tim')
+@section('app-description', 'Daftar tim yang mengikuti IDLe')
 
 {{--Content--}}
 

@@ -2,7 +2,7 @@
 
 {{--Page Title--}}
 
-@section('title', 'Test TItle')
+@section('title', 'Peserta Final')
 
 {{--Custom CSS--}}
 
@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Dashboard')
-@section('app-description', 'Dashboard description')
+@section('app-title', 'Tambah Peserta Final ' . $kategori->kategori)
+@section('app-description', '')
 
 {{--Content--}}
 
@@ -23,7 +23,7 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="tile-title-w-btn">
-                    <h3 class="title">Tambah Peserta {{ $kategori->nama_kategori }} Tahap 2</h3>
+                    <h3 class="title">Tambah Peserta {{ $kategori->nama_kategori }} Tahap Final</h3>
                 </div>
 
                 <div class="tile-body">

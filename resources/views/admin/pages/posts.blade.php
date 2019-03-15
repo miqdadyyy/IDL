@@ -2,7 +2,7 @@
 
 {{--Page Title--}}
 
-@section('title', 'Test TItle')
+@section('title', 'Post')
 
 {{--Custom CSS--}}
 
@@ -12,8 +12,8 @@
 
 {{--App Title--}}
 
-@section('app-title', 'Dashboard')
-@section('app-description', 'Dashboard description')
+@section('app-title', 'Daftar Post')
+@section('app-description', 'Daftar post IDL')
 
 {{--Content--}}
 
