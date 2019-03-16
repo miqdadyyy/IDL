@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Kategori;
 use App\Mahasiswa;
+use App\Penilaian;
 use App\Post;
 use App\Submission;
 use App\Tim;
@@ -112,7 +113,7 @@ class AjaxController extends Controller
     public function getTimsData()
     {
         $kategoris = Kategori::with('tims')->get();
-        $colors = ["#F7464A", "#46BFBD", "#FDB45C"];
+        $colors = ['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000'];
         $labels = [];
         $values = [];
         foreach ($kategoris as $key => $kategori) {
@@ -151,5 +152,20 @@ class AjaxController extends Controller
         }
 
         return ["data" => $data, "angkatan" => $_angkatan, "prodi" => $_prodi];
+    }
+
+    public function getNilai($id, $babak){
+        return Penilaian::select('nilai')
+            ->where('id_tim', $id)
+            ->where('babak', $babak)
+            ->get()->first()->nilai;
+    }
+
+    public function setNilai(Request $request){
+        $id = $request->tim;
+        $nilai = $request->nilai;
+        $babak = $request->babak;
+        $status = Penilaian::setNilai($id, $nilai, $babak);
+        return $status == true ? 1 : 0;
     }
 }

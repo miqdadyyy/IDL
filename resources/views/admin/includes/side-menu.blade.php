@@ -20,6 +20,7 @@
                 @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
                     <li><a class="treeview-item {{ request()->is('admin/penyisihan-1/'.$kategori->kategori) ? 'active' : '' }}" href="{{ route('admin.penyisihan-1.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
                 @endforeach
+                    <li><a class="treeview-item {{ request()->is('penyisihan-1/set-nilai') ? 'active' : '' }}" href="{{ route('admin.penyisihan-1.set-nilai') }}"><i class="icon fa fa-circle-o"></i>Set Nilai</a></li>
             </ul>
         </li>
 
@@ -28,6 +29,7 @@
                 @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
                     <li><a class="treeview-item {{ request()->is('admin/penyisihan-2/'.$kategori->kategori) ? 'active' : '' }}" href="{{ route('admin.penyisihan-2.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
                 @endforeach
+                    <li><a class="treeview-item {{ request()->is('penyisihan-2/set-nilai') ? 'active' : '' }}" href="{{ route('admin.penyisihan-2.set-nilai') }}"><i class="icon fa fa-circle-o"></i>Set Nilai</a></li>
             </ul>
         </li>
 
@@ -36,6 +38,7 @@
                 @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
                     <li><a class="treeview-item {{ request()->is('admin/final/'.$kategori->kategori) ? 'active' : '' }}" href="{{ route('admin.final.index', ['kategori' => $kategori->kategori]) }}"><i class="icon fa fa-circle-o"></i>{{ $kategori->nama_kategori }}</a></li>
                 @endforeach
+                    <li><a class="treeview-item {{ request()->is('final/set-nilai') ? 'active' : '' }}" href="{{ route('admin.final.set-nilai') }}"><i class="icon fa fa-circle-o"></i>Set Nilai</a></li>
             </ul>
         </li>
         <li><a class="app-menu__item {{ request()->is('admin/mahasiswa') ? 'active' : '' }}" href="{{ route('admin.mahasiswa.index') }}"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Mahasiswa</span></a></li>

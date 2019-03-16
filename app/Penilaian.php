@@ -31,6 +31,26 @@ class Penilaian extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+
+    public static function setNilai($id, $nilai, $babak){
+        $penilaian = Penilaian::where('id_tim', $id)
+            ->where('babak', $babak)
+            ->get()->first();
+
+        if($penilaian == null){
+            $penilaian = Penilaian::create([
+                'id_tim' => $id,
+                'babak' => $babak,
+                'nilai' => $nilai
+            ]);
+        } else{
+            $penilaian->update([
+                'nilai' => $nilai
+            ]);
+        }
+        return true;
+    }
+
     public function tim()
     {
         return $this->belongsTo('App\Tim', 'id_tim');

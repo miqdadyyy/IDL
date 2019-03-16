@@ -8,6 +8,7 @@ use App\Mahasiswa;
 use App\Peserta;
 use App\Tim;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class KompetisiFinal extends Controller
 {
@@ -52,6 +53,24 @@ class KompetisiFinal extends Controller
 
         // TODO : return redirect with success
         return redirect()->route('admin.final.index', $id_kategori);
+    }
+
+    public function getSetNilaiPages()
+    {
+        $babak = 3;
+        $tahap = "Final";
+        $kategoris = Kategori::where('id_ormawa', Auth::user()->id_ormawa)->get();
+        $tims = [];
+        foreach ($kategoris as $kategori) {
+            $tim = Tim::select('id', 'nama_tim', 'babak')
+                ->where('id_kategori', $kategori->id)
+                ->where('babak', $babak)
+                ->get();
+            foreach ($tim as $t) {
+                array_push($tims, $t);
+            }
+        }
+        return view('admin.pages.set_nilai', compact('tims', 'tahap', 'babak'));
     }
 
     /**

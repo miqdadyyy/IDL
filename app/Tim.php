@@ -96,6 +96,11 @@ class Tim extends Model
         return $this->hasMany('App\Peserta', 'id_tim');
     }
 
+    public function nilais()
+    {
+        return $this->hasMany('App\Penilaian', 'id_tim');
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
