@@ -35,7 +35,14 @@ Route::get('/kompetisi/{kategori}/submit/store', 'SubmissionController@submitFil
 
 Route::get('/test', function (){
 
-    return view('admin.pages.test');
+    $text = "lorem ipsum dolor sit amet";
+    $mail = app()->make(Snowfire\Beautymail\Beautymail::class);
+    $mail->send('mails.send', compact('text'), function($message){
+        $message
+            ->from('test' . '@idle.ilkom.unej.ac.id')
+            ->to('miqdad.farcha@gmail.com', 'Miqdad Farcha')
+            ->subject('Pesan dari IDLe');
+    });
 });
 
 Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' =>['auth']], function(){
@@ -51,7 +58,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
 
     Route::group(['middleware' => ['ormawa']], function (){
         Route::post('penyisihan-1/destroy/{tim}', 'KompetisiPenyisihan1@destroy')->name('tim.destroy');
-        Route::get('penyisihan-1/create/{kategori}', 'KompetisiPenyisihan1@create')->name('penyisihan-1.create');
+//        Route::get('penyisihan-1/create/{kategori}', 'KompetisiPenyisihan1@create')->name('penyisihan-1.create');
         Route::post('penyisihan-1/store/{kategori}', 'KompetisiPenyisihan1@store')->name('penyisihan-1.store');
         Route::post('penyisihan-1/update/{kategori}', 'KompetisiPenyisihan1@update')->name('penyisihan-1.update');
         Route::get('penyisihan-1/{kategori}', 'KompetisiPenyisihan1@index')->name('penyisihan-1.index');
@@ -59,13 +66,13 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
         Route::post('penyisihan-2/down/{kategori}/{tim}', 'KompetisiPenyisihan2@destroy')->name('penyisihan-2.destroy');
         Route::get('penyisihan-2/create/{kategori}', 'KompetisiPenyisihan2@create')->name('penyisihan-2.create');
         Route::post('penyisihan-2/store/{kategori}', 'KompetisiPenyisihan2@store')->name('penyisihan-2.store');
-        Route::post('penyisihan-2/update/{kategori}', 'KompetisiPenyisihan2@update')->name('penyisihan-2.update');
+//        Route::post('penyisihan-2/update/{kategori}', 'KompetisiPenyisihan2@update')->name('penyisihan-2.update');
         Route::get('penyisihan-2/{kategori}', 'KompetisiPenyisihan2@index')->name('penyisihan-2.index');
 
         Route::post('final/down/{kategori}/{tim}', 'KompetisiFinal@destroy')->name('final.destroy');
         Route::get('final/create/{kategori}', 'KompetisiFinal@create')->name('final.create');
         Route::post('final/store/{kategori}', 'KompetisiFinal@store')->name('final.store');
-        Route::post('final/update/{kategori}', 'KompetisiFinal@update')->name('final.update');
+//        Route::post('final/update/{kategori}', 'KompetisiFinal@update')->name('final.update');
         Route::get('final/{kategori}', 'KompetisiFinal@index')->name('final.index');
 
     });
@@ -86,4 +93,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::post('post/update/{post}', 'PostController@update')->name('post.update');
     Route::post('post/destroy/{post}', 'PostController@destroy')->name('post.destroy');
 
+    Route::get('mail/', 'MailController@getMailPage')->name('mail.page');
+    Route::post('mail/mahasiswa', 'MailController@sendMailMahasiswa')->name('mail.mahasiswa');
+    Route::post('mail/tim', 'MailController@sendMailTim')->name('mail.tim');
 });

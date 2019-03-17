@@ -22,7 +22,8 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="form-group">
-                    <a href="{{ route('admin.final.create', ['kategori' => $kategori->kategori ]) }}" class="btn btn-primary">Tambah Peserta Final</a>
+                    <a href="{{ route('admin.final.create', ['kategori' => $kategori->kategori ]) }}"
+                       class="btn btn-primary">Tambah Peserta Final</a>
                 </div>
                 <div class="tile-body">
                     <table class="table table-hover table-bordered" id="tim-table">
@@ -41,7 +42,8 @@
 
                         </tbody>
                     </table>
-                    <form action="{{ route('admin.final.destroy', ['tim' => -1, 'kategori' => $kategori->kategori ]) }}" method="post" id="delete-form">
+                    <form action="{{ route('admin.final.destroy', ['tim' => -1, 'kategori' => $kategori->kategori ]) }}"
+                          method="post" id="delete-form">
                         @csrf
                     </form>
                 </div>
@@ -79,7 +81,13 @@
                 ajax: "{{ route('admin.ajax.final', ['kategori' => $kategori->id]) }}",
                 columns: [
                     {data: 'no'},
-                    {data: 'nama_tim'},
+                    {
+                        data: '.',
+                        render: function (data, type, row) {
+                            return data;
+                            // return "<a href='/admin/mahasiswa/" + data['nim'] + "'" + ">" + data['nama'] + "</a>"
+                        }
+                    },
                     {
                         data: 'mahasiswa',
                         render: function (data, type, row) {
@@ -91,8 +99,8 @@
                         render: function (data, type, row) {
                             content = "";
                             console.log(data);
-                            for (var i=0; i<data.length; i++){
-                                content += "<a href='/admin/mahasiswa/" + data[i]['nim'] + "'" + ">"+ data[i]['mahasiswa']['nama'] +"</a>";
+                            for (var i = 0; i < data.length; i++) {
+                                content += "<a href='/admin/mahasiswa/" + data[i]['nim'] + "'" + ">" + data[i]['mahasiswa']['nama'] + "</a>";
 
                                 content = i != data.length - 1 ? content += ", " : content;
                             }
@@ -102,9 +110,9 @@
                     {
                         data: 'submission',
                         render: function (data, type, row) {
-                            if(data != null){
-                                return '<a href="/admin/ajax/download/'+data+'" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
-                            } else{
+                            if (data != null) {
+                                return '<a href="/admin/ajax/download/' + data + '" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
+                            } else {
                                 return "Belum Melakukan Submission";
                             }
 
@@ -112,9 +120,9 @@
                     },
                     {
                         data: 'id',
-                        render: function(data, type, row){
-                            content = "<a href=\"edit/"+ data +"\" class=\"btn btn-info\">Edit</a>";
-                            content += "<button onclick=\"deletePost(" + data +")\" class=\"btn btn-danger\">Delete</button>";
+                        render: function (data, type, row) {
+                            content = "<a href=\"edit/" + data + "\" class=\"btn btn-info\">Edit</a>";
+                            content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-danger\">Delete</button>";
                             return content;
                         }
                     }

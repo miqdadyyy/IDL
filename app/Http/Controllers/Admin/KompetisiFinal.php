@@ -81,7 +81,7 @@ class KompetisiFinal extends Controller
      */
     public function show($id_kategori, $id)
     {
-        return 'Show ' . $id_kategori . '_' . $id;
+        return route('admin.tim.show', ['tim' => $id]);
     }
 
     /**
