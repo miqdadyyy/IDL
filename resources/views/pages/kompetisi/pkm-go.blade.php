@@ -47,7 +47,7 @@
                 <p>
                     <br/>
                     <a href="contact.html" class="btn btn-theme">Rule Book</a>
-                    <a href="contact.html" class="btn btn-theme">Daftar Peserta</a>
+                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->id]) }}" class="btn btn-theme">Daftar Peserta</a>
                 </p>
             </div>
         </div>
