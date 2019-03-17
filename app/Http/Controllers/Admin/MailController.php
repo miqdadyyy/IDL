@@ -61,7 +61,7 @@ class MailController extends Controller
                 $email = $peserta->mahasiswa->email;
                 $mailer->send('mails.send', compact('text', 'nama'), function ($message) use ($email) {
                     $message
-                        ->from(Auth::user()->name . '@idle.ilkom.unej.ac.id')
+                        ->from(strtolower(Auth::user()->name) . '@idle.ilkom.unej.ac.id')
                         ->to($email)
                         ->subject('Pesan dari IDLe');
                 });
