@@ -2,7 +2,7 @@
 
 {{--Page Title--}}
 
-@section('title', 'Test TItle')
+@section('title', 'Peserta Final')
 
 {{--Custom CSS--}}
 
