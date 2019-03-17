@@ -46,9 +46,23 @@ class KompetisiPenyisihan2 extends Controller
     public function store($id_kategori, Request $request)
     {
         $tims = $request->tims;
-
+        $tahap = "tahap 2";
+        $kategori = Kategori::where('kategori', $id_kategori)->get()->first()->nama_kategori;
+        $mailer = app()->make(\Snowfire\Beautymail\Beautymail::class);
         foreach($tims as $tim){
             Tim::updateKompetisi($tim, 2);
+            $tim_ = Tim::with('pesertas.mahasiswa')->find($tim);
+            $kode = $tim_->submissionid;
+            $nama = $tim_->nama_tim;
+            foreach ($tim_->pesertas as $peserta){
+                $email = $peserta->mahasiswa->email;
+                $mailer->send('mails.lolos', compact('tahap', 'tim_', 'kategori', 'nama', 'kode'), function ($message) use ($email) {
+                    $message
+                        ->from(Auth::user()->name . '@idle.ilkom.unej.ac.id')
+                        ->to($email)
+                        ->subject('Pengumuman Babak 2');
+                });
+            }
         }
 
         // TODO : return redirect with success

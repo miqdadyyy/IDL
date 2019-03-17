@@ -82,7 +82,7 @@
                 columns: [
                     {data: 'no'},
                     {
-                        data: '.',
+                        data: 'nama_tim',
                         render: function (data, type, row) {
                             return data;
                             // return "<a href='/admin/mahasiswa/" + data['nim'] + "'" + ">" + data['nama'] + "</a>"

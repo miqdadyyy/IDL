@@ -66,7 +66,7 @@ class MailController extends Controller
                         ->subject('Pesan dari IDLe');
                 });
             }
-        } 
+        }
         return redirect()->route('admin.mail.page')->with('success', 'Pesan berhasil dikirim');
     }
 }
