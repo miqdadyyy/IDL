@@ -58,6 +58,18 @@ class Mahasiswa extends Model
         return $mahasiswa;
     }
 
+    public static function updateMahasiswa($nim, $nama, $email, $no_hp){
+        $mahasiswa = Mahasiswa::findOrFail($nim);
+        if($mahasiswa->update([
+            'nama' => $nama,
+            'email' => $email,
+            'no_hp' => $no_hp
+        ])){
+            return true;
+        }
+        return false;
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

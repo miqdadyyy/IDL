@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property int $id
@@ -20,12 +21,14 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Tim extends Model
 {
+    use SoftDeletes;
     /**
      * @var array
      */
-    protected $fillable = ['id_kategori', 'ketua_tim', 'nama_tim', 'submissionid', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['id_kategori', 'ketua_tim', 'nama_tim', 'submissionid', 'babak', 'created_at', 'updated_at', 'deleted_at'];
 
-    public static function createTim($id_kategori, $ketua_tim, $nama_tim){
+    public static function createTim($id_kategori, $ketua_tim, $nama_tim)
+    {
         $tim = Tim::create([
             'id_kategori' => $id_kategori,
             'nama_tim' => $nama_tim,
@@ -34,6 +37,39 @@ class Tim extends Model
         ]);
 
         return $tim;
+    }
+
+    public static function updateKompetisi($id, $babak)
+    {
+        if (Tim::findOrFail($id)->update([
+            'babak' => $babak,
+            'submissionid' => md5(date('Y-m-d h:M') . $id . $babak)
+        ])) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static function updateTim($id, $nama_tim, $ketua){
+        $tim = Tim::findOrFail($id);
+        if($tim->update([
+            'nama_tim' => $nama_tim,
+            'ketua_tim' => $ketua
+        ])){
+            return true;
+        }
+        return false;
+    }
+
+    public static function deleteTim($id)
+    {
+        $tim = Tim::with('pesertas')->findOrFail($id);
+        foreach ($tim->pesertas as $peserta) {
+            Peserta::findOrFail($peserta->id)->delete();
+        }
+        $tim->delete();
+        return true;
     }
 
     /**
@@ -58,6 +94,11 @@ class Tim extends Model
     public function pesertas()
     {
         return $this->hasMany('App\Peserta', 'id_tim');
+    }
+
+    public function nilais()
+    {
+        return $this->hasMany('App\Penilaian', 'id_tim');
     }
 
     /**

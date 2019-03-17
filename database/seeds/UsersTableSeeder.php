@@ -17,14 +17,15 @@ class UsersTableSeeder extends Seeder
             'email' => 'himasif@ilkom.com',
             'id_ormawa' => \App\Ormawa::where('nama_ormawa' ,'Himasif')->first()->id,
             'password' => bcrypt('himasif123'),
+            'profile_pict' => 'assets/admin/img/profile/himasif.png'
         ]);
-
 
         DB::table('users')->insert([
             'name' => 'himatif',
             'email' => 'himatif@ilkom.com',
             'id_ormawa' => \App\Ormawa::where('nama_ormawa' ,'Himatif')->first()->id,
             'password' => bcrypt('himatif321'),
+            'profile_pict' => 'assets/admin/img/profile/himatif.png'
         ]);
 
         DB::table('users')->insert([
@@ -32,6 +33,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'laos@ilkom.com',
             'id_ormawa' => \App\Ormawa::where('nama_ormawa' ,'Laos')->first()->id,
             'password' => bcrypt('laos123321'),
+            'profile_pict' => 'assets/admin/img/profile/laos.png'
         ]);
     }
 }

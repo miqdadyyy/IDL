@@ -16,7 +16,8 @@ class PostController extends Controller
     public function index()
     {
         // TODO : Return view admin posts management page
-        return view('admin.pages.posts');
+        $posts = Post::with('user')->orderBy('created_at', 'desc')->paginate(10);
+        return view('admin.pages.posts', compact('posts'));
     }
 
     /**
@@ -27,7 +28,7 @@ class PostController extends Controller
     public function create()
     {
         // TODO : Return view admin add post
-        return view('admin.pages.add_post');
+        return view('admin.pages.create_post');
     }
 
     /**
@@ -39,11 +40,11 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $title = $request->title;
-        $desc = $request->desc;
+        $desc = $request->description;
         Post::createPost($title, $desc);
 
         // TODO : Redirect to admin index post
-//        return redirect()->route()
+        return redirect()->route('admin.post.index');
     }
 
     /**
@@ -66,10 +67,11 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
         // TODO : View to edit post
-//        return view('admin.pages.edit_post', compact('post'));
+        $post = Post::findOrFail($id);
+        return view('admin.pages.edit_post', compact('post'));
     }
 
     /**
@@ -82,16 +84,17 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $title = $request->title;
-        $desc = $request->desc;
+        $desc = $request->description;
         $id = $post->id;
 
         $post = Post::updatePost($id, $title, $desc);
         if(!$post){
             // TODO : Return if post not found
+            return redirect()->route('admin.post.index');
         }
 
         // TODO : Return redirect to post index
-//        return redirect()->route('');
+        return redirect()->route('admin.post.index');
     }
 
     /**
@@ -100,14 +103,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        $post = Post::deletePost($post->id);
-        if(!post){
-            // TODO : If post not found
-        }
-
-
+        $post = Post::deletePost($id);
+        return redirect()->route('admin.post.index');
         // TODO : If post deleted
     }
 }
