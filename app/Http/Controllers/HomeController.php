@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Kategori;
+use App\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $kategoris = Kategori::get();
+        $posts = Post::with('user')->paginate(10);
+//        return $posts;
+        return view('pages.home', compact('kategoris', 'posts'));
     }
 }

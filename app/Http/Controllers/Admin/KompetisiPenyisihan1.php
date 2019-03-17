@@ -61,18 +61,28 @@ class KompetisiPenyisihan1 extends Controller
      */
     public function store($id_kategori, Request $request)
     {
-        $mahasiswas = $request->mahasiswas;
+//        return $request;
+
+        $mahasiswas = [];
+        for($i=0; $i<count($request->nama); $i++){
+            $mahasiswas[$i]["nama"] = $request->nama[$i];
+            $mahasiswas[$i]["nim"] = $request->nim[$i];
+            $mahasiswas[$i]["email"] = $request->email[$i];
+            $mahasiswas[$i]["no_hp"] = $request->no_hp[$i];
+        }
+
+//        return $mahasiswas;
 
         // TODO : Validation ????
 
         $pesertas = [];
 
         foreach ($mahasiswas as $mahasiswa) {
-            $mhs = Mahasiswa::createMahasiswa($mahasiswa->nim, $mahasiswa->nama, $mahasiswa->email, $mahasiswa->no_hp);
+            $mhs = Mahasiswa::createMahasiswa($mahasiswa["nim"], $mahasiswa["nama"], $mahasiswa["email"], $mahasiswa["no_hp"]);
             array_push($pesertas, $mhs);
         }
 
-        $tim = Tim::createTim($request->id_kategori, $pesertas[0], $request->nama_tim);
+        $tim = Tim::createTim($request->kategori, $pesertas[0], $request->nama_tim);
 
         foreach ($pesertas as $peserta) {
             Peserta::linkPesertaToTim($peserta->nim, $tim->id);

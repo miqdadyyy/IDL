@@ -40,14 +40,14 @@ class Mahasiswa extends Model
     /**
      * @var array
      */
-    protected $fillable = ['nama', 'email', 'no_hp', 'created_at', 'updated_at'];
+    protected $fillable = ['nim', 'nama', 'email', 'no_hp', 'created_at', 'updated_at'];
 
     public static function createMahasiswa($nim, $nama, $email, $no_hp){
         $mahasiswa = Mahasiswa::find($nim);
         if($mahasiswa != null){
             return $mahasiswa;
         }
-
+//        return $nim;
         $mahasiswa = Mahasiswa::create([
             'nim' => $nim,
             'nama' => $nama,

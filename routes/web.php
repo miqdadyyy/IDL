@@ -13,9 +13,7 @@ use App\Kategori;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
@@ -26,9 +24,8 @@ Route::get('/register', function(){
 Route::get('/post/{post}', 'Admin\PostController@show')->name('post.show');
 
 Route::get('/kompetisi/{kategori}', 'KompetisiController@getPagesByCategory')->name('kompetisi.index');
-Route::get('/kompetisi/{kategori}/daftar', 'KompetisiController@getPageDaftar')->name('kompetisi.daftar');
 Route::post('/kompetisi/{kategori}/store', 'Admin\KompetisiPenyisihan1@store')->name('kompetisi.store');
-Route::get('/kompetisi/{kategori}/peserta', 'KompetisiController@getPagePeserta')->name('kompetisi.peserta');
+Route::get('/kompetisi/{kategori}/peserta', 'KompetisiController@getPesertasByCategory')->name('kompetisi.peserta');
 
 Route::get('/kompetisi/{kategori}/submit', 'SubmissionController@getPageSubmit')->name('kompetisi.submit.index');
 Route::get('/kompetisi/{kategori}/submit/store', 'SubmissionController@submitFile')->name('kompetisi.submit.store');
@@ -51,7 +48,6 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
 
     Route::resource('mahasiswa', 'MahasiswaController');
     Route::resource('tim', 'TimController');
-
     Route::get('penyisihan-1/set-nilai', 'KompetisiPenyisihan1@getSetNilaiPages')->name('penyisihan-1.set-nilai');
     Route::get('penyisihan-2/set-nilai', 'KompetisiPenyisihan2@getSetNilaiPages')->name('penyisihan-2.set-nilai');
     Route::get('final/set-nilai', 'KompetisiFinal@getSetNilaiPages')->name('final.set-nilai');

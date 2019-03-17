@@ -33,7 +33,8 @@ class Tim extends Model
             'id_kategori' => $id_kategori,
             'nama_tim' => $nama_tim,
             'ketua_tim' => $ketua_tim->nim,
-            'submission_id' => md5(date('Y-m-d') . '_' . $nama_tim . '_' . $id_kategori)
+            'submissionid' => md5(date('Y-m-d') . '_' . $nama_tim . '_' . $id_kategori),
+            'babak' => 1
         ]);
 
         return $tim;

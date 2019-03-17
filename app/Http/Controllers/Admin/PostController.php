@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
+use App\Kategori;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -53,12 +54,13 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        $author = Post::find($post->id)->user->name;
-
-        // TODO : Show post by all user
-//        return view('pages.post', compact('post', 'author'));
+        $kategoris = Kategori::get();
+        $post = Post::with('user')
+        ->findOrFail($id);
+//        return $post;
+        return view('pages.post', compact('post', 'kategoris'));
     }
 
     /**
