@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('id_ormawa')->unsigned();
+            $table->string('profile_pict');
             $table->rememberToken();
             $table->timestamps();
         });

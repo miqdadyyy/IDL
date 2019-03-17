@@ -23,13 +23,11 @@ Route::get('/register', function(){
     return redirect('/');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/post/{post}', 'PostController@show')->name('post.show');
+Route::get('/post/{post}', 'Admin\PostController@show')->name('post.show');
 
 Route::get('/kompetisi/{kategori}', 'KompetisiController@getPagesByCategory')->name('kompetisi.index');
 Route::get('/kompetisi/{kategori}/daftar', 'KompetisiController@getPageDaftar')->name('kompetisi.daftar');
-Route::post('/kompetisi/{kategori}/store', 'Admin/TimController@store')->name('kompetisi.store');
+Route::post('/kompetisi/{kategori}/store', 'Admin\KompetisiPenyisihan1@store')->name('kompetisi.store');
 Route::get('/kompetisi/{kategori}/peserta', 'KompetisiController@getPagePeserta')->name('kompetisi.peserta');
 
 Route::get('/kompetisi/{kategori}/submit', 'SubmissionController@getPageSubmit')->name('kompetisi.submit.index');
@@ -37,49 +35,65 @@ Route::get('/kompetisi/{kategori}/submit/store', 'SubmissionController@submitFil
 
 Route::get('/test', function (){
 
-    $data = new stdClass();
-    $data->kategori = 'Pengembangan Perangkat Lunak';
-    $data->submission_code = 'loremipsumdolorsitamet';
-    $data->sender = ucfirst(Auth::user()->name);
-    $data->receiver = 'Miqdad Yanuar';
-
-    \Illuminate\Support\Facades\Mail::to('miqdad.farcha@gmail.com')->send(new \App\Mail\SubmissionMail($data));
+    $text = "lorem ipsum dolor sit amet";
+    $mail = app()->make(Snowfire\Beautymail\Beautymail::class);
+    $mail->send('mails.send', compact('text'), function($message){
+        $message
+            ->from('test' . '@idle.ilkom.unej.ac.id')
+            ->to('miqdad.farcha@gmail.com', 'Miqdad Farcha')
+            ->subject('Pesan dari IDLe');
+    });
 });
 
 Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' =>['auth']], function(){
 
-    Route::get('/', function (){
-        return "THIS IS INDEX";
-    })->name('index');
+    Route::get('/', 'AdminController@index')->name('dashboard');
+
+    Route::resource('mahasiswa', 'MahasiswaController');
+    Route::resource('tim', 'TimController');
+
+    Route::get('penyisihan-1/set-nilai', 'KompetisiPenyisihan1@getSetNilaiPages')->name('penyisihan-1.set-nilai');
+    Route::get('penyisihan-2/set-nilai', 'KompetisiPenyisihan2@getSetNilaiPages')->name('penyisihan-2.set-nilai');
+    Route::get('final/set-nilai', 'KompetisiFinal@getSetNilaiPages')->name('final.set-nilai');
 
     Route::group(['middleware' => ['ormawa']], function (){
-        /* TIM */
+        Route::post('penyisihan-1/destroy/{tim}', 'KompetisiPenyisihan1@destroy')->name('tim.destroy');
+//        Route::get('penyisihan-1/create/{kategori}', 'KompetisiPenyisihan1@create')->name('penyisihan-1.create');
+        Route::post('penyisihan-1/store/{kategori}', 'KompetisiPenyisihan1@store')->name('penyisihan-1.store');
+        Route::post('penyisihan-1/update/{kategori}', 'KompetisiPenyisihan1@update')->name('penyisihan-1.update');
+        Route::get('penyisihan-1/{kategori}', 'KompetisiPenyisihan1@index')->name('penyisihan-1.index');
 
-        // READ
-        Route::get('tim/{kategori}', 'TimController@index')->name('tim.index');
-        Route::get('tim/{kategori}/{tim}', 'TimController@show')->name('tim.show');
-        // CREATE
-        Route::get('tim/{kategori}/create', 'TimController@create')->name('tim.create');
-        Route::post('tim/{kategori}/store', 'TimController@store')->name('tim.store');
-        // EDIT
-        Route::get('tim/{kategori}/{tim}/edit', 'TimController@edit')->name('tim.edit');
-        Route::post('tim/{kategori}/update', 'TimController@update')->name('tim.update');
-        // DELETE
-        Route::post('tim/{kategori}/{tim}/destroy', 'TimController@destroy')->name('tim.delete');
+        Route::post('penyisihan-2/down/{kategori}/{tim}', 'KompetisiPenyisihan2@destroy')->name('penyisihan-2.destroy');
+        Route::get('penyisihan-2/create/{kategori}', 'KompetisiPenyisihan2@create')->name('penyisihan-2.create');
+        Route::post('penyisihan-2/store/{kategori}', 'KompetisiPenyisihan2@store')->name('penyisihan-2.store');
+//        Route::post('penyisihan-2/update/{kategori}', 'KompetisiPenyisihan2@update')->name('penyisihan-2.update');
+        Route::get('penyisihan-2/{kategori}', 'KompetisiPenyisihan2@index')->name('penyisihan-2.index');
+
+        Route::post('final/down/{kategori}/{tim}', 'KompetisiFinal@destroy')->name('final.destroy');
+        Route::get('final/create/{kategori}', 'KompetisiFinal@create')->name('final.create');
+        Route::post('final/store/{kategori}', 'KompetisiFinal@store')->name('final.store');
+//        Route::post('final/update/{kategori}', 'KompetisiFinal@update')->name('final.update');
+        Route::get('final/{kategori}', 'KompetisiFinal@index')->name('final.index');
+
     });
 
+    Route::get('ajax/penyisihan-1/{kategori}', 'AjaxController@getPenyisihan1Tim')->name('ajax.penyisihan1');
+    Route::get('ajax/penyisihan-2/{kategori}', 'AjaxController@getPenyisihan2Tim')->name('ajax.penyisihan2');
+    Route::get('ajax/final/{kategori}', 'AjaxController@getFinalTim')->name('ajax.final');
+    Route::get('ajax/mahasiswas', 'AjaxController@getMahasiswas')->name('ajax.mahasiswa');
+    Route::get('ajax/tims', 'AjaxController@getTims')->name('ajax.tim');
+    Route::get('ajax/nilai/{id}/{babak}', 'AjaxController@getNilai')->name('ajax.get-nilai');
+    Route::post('ajax/nilai', 'AjaxController@setNilai')->name('ajax.set-nilai');
+    Route::get('ajax/download/{path}', 'AjaxController@downloadFile')->name('ajax.download');
 
-    /* POST */
-
-    // READ
     Route::get('post/', 'PostController@index')->name('post.index');
-    // CREATE
     Route::get('post/create', 'PostController@create')->name('post.create');
     Route::post('post/store', 'PostController@store')->name('post.store');
-    // EDIT
     Route::get('post/{post}/edit', 'PostController@edit')->name('post.edit');
-    Route::post('post/update', 'PostController@update')->name('post.update');
-    // DELETE
-    Route::post('post/destroy', 'PostController@destroy')->name('post.destroy');
+    Route::post('post/update/{post}', 'PostController@update')->name('post.update');
+    Route::post('post/destroy/{post}', 'PostController@destroy')->name('post.destroy');
 
+    Route::get('mail/', 'MailController@getMailPage')->name('mail.page');
+    Route::post('mail/mahasiswa', 'MailController@sendMailMahasiswa')->name('mail.mahasiswa');
+    Route::post('mail/tim', 'MailController@sendMailTim')->name('mail.tim');
 });
