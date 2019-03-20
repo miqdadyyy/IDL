@@ -63,6 +63,8 @@ class KompetisiPenyisihan1 extends Controller
     {
 //        return $request;
 
+        $kategori = Kategori::where('kategori', $id_kategori)->get()->first();
+
         $mahasiswas = [];
         for($i=0; $i<count($request->nama); $i++){
             $mahasiswas[$i]["nama"] = $request->nama[$i];
@@ -71,13 +73,18 @@ class KompetisiPenyisihan1 extends Controller
             $mahasiswas[$i]["no_hp"] = $request->no_hp[$i];
         }
 
-//        return $mahasiswas;
+        if(count($m = Tim::where('ketua_tim', $mahasiswas[0]["nim"])->get())){
+            return redirect()->back()->with('error', 'Gagal mendaftar, karena ' . $m->first()->nama . ' sudah menjadi ketua di tim lain');
+        }
 
         // TODO : Validation ????
 
         $pesertas = [];
 
         foreach ($mahasiswas as $mahasiswa) {
+            if($mahasiswa["nim"] == null){
+                continue;
+            }
             $mhs = Mahasiswa::createMahasiswa($mahasiswa["nim"], $mahasiswa["nama"], $mahasiswa["email"], $mahasiswa["no_hp"]);
             array_push($pesertas, $mhs);
         }
@@ -88,9 +95,24 @@ class KompetisiPenyisihan1 extends Controller
             Peserta::linkPesertaToTim($peserta->nim, $tim->id);
         }
 
+        $mailer = app()->make(\Snowfire\Beautymail\Beautymail::class);
+        $kode = $tim->submissionid;
+        foreach ($mahasiswas as $mahasiswa){
+            if($mahasiswa["nim"] == null){
+                continue;
+            }
+            $email = $mahasiswa["email"];
+            $mailer->send('mails.daftar', compact('tim', 'kategori', 'kode'), function ($message) use ($email) {
+                $message
+                    ->from(strtolower(Auth::user()->name) . '@idle.ilkom.unej.ac.id')
+                    ->to($email)
+                    ->subject('Pendaftaran IDLe');
+            });
+        }
+
         // TODO : return redirect with success
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Tim berhasil didaftarkan, silahkan cek email anda');
 
     }
 

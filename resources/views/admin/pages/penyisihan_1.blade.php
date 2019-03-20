@@ -99,7 +99,7 @@
                         data: 'submission',
                         render: function (data, type, row) {
                             if (data != null) {
-                                return '<a href="/admin/ajax/download/' + data + '" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
+                                return '<a href="/admin/ajax/download/' + data['token'] + '" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
                             } else {
                                 return "Belum Melakukan Submission";
                             }

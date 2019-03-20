@@ -105,10 +105,11 @@
                         }
                     },
                     {
-                        data: 'video',
-                        render: function (data, type, row) {
-                            if (data != null) {
-                                return '<a href="' + data + '" class="align-items-center">' + data + '</a>';
+                        data: 'submission.data',
+                        render: function (data_, type, row) {
+                            if (data_ != null) {
+                                data = JSON.parse(data_.replace(/&quot;/g,'"'));
+                                return '<a href="' + data.link + '" class="align-items-center">' + data.link + '</a>';
                             } else {
                                 return "Link Tidak Tersedia";
                             }
@@ -118,7 +119,7 @@
                         data: 'submission',
                         render: function (data, type, row) {
                             if (data != null) {
-                                return '<a href="/admin/ajax/download/' + data + '" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
+                                return '<a href="/admin/ajax/download/' + data['token'] + '" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
                             } else {
                                 return "Belum Melakukan Submission";
                             }

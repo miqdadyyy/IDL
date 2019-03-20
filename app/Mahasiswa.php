@@ -47,7 +47,9 @@ class Mahasiswa extends Model
         if($mahasiswa != null){
             return $mahasiswa;
         }
-//        return $nim;
+
+        return $nim . ' ' . $nama;
+
         $mahasiswa = Mahasiswa::create([
             'nim' => $nim,
             'nama' => $nama,

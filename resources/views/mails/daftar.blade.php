@@ -9,7 +9,7 @@
 
     @include('beautymail::templates.sunny.contentStart')
 
-    <p>Selamat <b> {{ $tim_->nama_tim }} </b>, anda berhasil lolos ke {{ $tahap }} dalam kategori {{ $kategori->nama_kategori }}.</p>
+    <p>Selamat <b> Tim anda telah terdaftar pada Event IDLe dengan nama tim {{ $tim->nama_tim }} dalam kategori {{ $kategori->nama_kategori }}</p>
 
     @include('beautymail::templates.sunny.contentEnd')
 
@@ -17,11 +17,10 @@
         <p>Silahkan tunggu informasi selanjutnya dari email</p>
     @else
         @include('beautymail::templates.sunny.contentStart')
-        <p>Silahkan submit ke babak selanjutnya dengan klik tombol dibawah : </p>
+        <p>Silahkan submit ke karya tulis dengan klik tombol dibawah : </p>
         @include('beautymail::templates.sunny.button', [
         	'title' => 'Submit',
         	'link' => route('kompetisi.submit.index', ['kategori' => $kategori->kategori, 'token' => $kode])])
-
         
         <p>atau akses link berikut : <a
                     href="{{ route('kompetisi.submit.index', ['kategori' => $kategori->kategori, 'token' => $kode]) }}">{{ route('kompetisi.submit.index', ['kategori' => $kategori->kategori, 'token' => $kode]) }}</a></p>

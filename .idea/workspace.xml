@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d386a0c3-7f9a-4014-b92f-7ec5339834bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/bisnis-tik.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/bisnis-tik.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/game.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/game.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/iot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/iot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/ppl.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/ppl.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mails/daftar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/submission_1.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/submission_2.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/submission_3.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AjaxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AjaxController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiPenyisihan1.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiPenyisihan1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mahasiswa.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mahasiswa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Submission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Submission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/final.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/final.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mails/lolos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mails/lolos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,93 +30,72 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/post.blade.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/bisnis-tik.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="49" column="134" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/game.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/iot.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/ppl.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+            <state relative-caret-position="-7">
+              <caret line="30" column="73" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="95" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/uiux.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AjaxController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="129" column="12" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/submission_3.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/submission_1.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Submission.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+              <folding>
+                <element signature="e#40#57#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/final.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+              <caret line="113" column="85" selection-start-line="113" selection-start-column="85" selection-end-line="113" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -146,28 +136,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/show_tim.blade.php" />
-        <option value="$PROJECT_DIR$/app/Charts/DoughnutChart.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/OrmawaMiddleware.php" />
-        <option value="$PROJECT_DIR$/app/Penilaian.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AjaxController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/set_nilai_penyisihan_1.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/config/beautymail.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/mail.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mails/send.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/mails/lolos.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/includes/side-menu.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/final.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/add_penyisihan_2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/edit_mahasiswa.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/edit_post.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/edit_tim.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/mahasiswa.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_1.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/set_nilai.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/show_mahasiswa.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/tims.blade.php" />
@@ -176,15 +154,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiFinal.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/base.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/Mahasiswa.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiPenyisihan1.php" />
         <option value="$PROJECT_DIR$/app/Tim.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/KompetisiController.php" />
@@ -197,6 +171,22 @@
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/ppl.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/uiux.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/mails/lolos.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/mails/daftar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/base.blade.php" />
+        <option value="$PROJECT_DIR$/app/Mahasiswa.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiPenyisihan1.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/config/filesystems.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pages/penyisihan_2.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/submission_1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/submission_2.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/submission_3.blade.php" />
+        <option value="$PROJECT_DIR$/app/Submission.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pages/final.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AjaxController.php" />
       </list>
     </option>
   </component>
@@ -304,7 +294,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -380,7 +370,7 @@
               <item name="IDL" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="mails" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
@@ -388,7 +378,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="kompetisi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IDL" type="b2602c69:ProjectViewProjectNode" />
@@ -414,32 +403,6 @@
             <path>
               <item name="IDL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="IDL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="IDL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="IDL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="IDL" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="kompetisi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -506,8 +469,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/pages" />
-      <recent name="$PROJECT_DIR$/resources/views/pages/kompetisi" />
       <recent name="$PROJECT_DIR$/resources/views/mails" />
+      <recent name="$PROJECT_DIR$/resources/views/pages/kompetisi" />
       <recent name="$PROJECT_DIR$/resources/views/admin/pages" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
     </key>
@@ -557,11 +520,13 @@
       <workItem from="1552524029615" duration="23995000" />
       <workItem from="1552642880146" duration="10817000" />
       <workItem from="1552764795926" duration="21414000" />
+      <workItem from="1552897850841" duration="3794000" />
+      <workItem from="1553096298821" duration="9366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134722000" />
+    <option name="totallyTimeSpent" value="147971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -576,7 +541,7 @@
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23333333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24090908" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -602,76 +567,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Mail/Mailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mails/send.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mails/lolos.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/includes/side-menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/add_final.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/final.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/create_post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="128" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/edit_mahasiswa.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/edit_post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/edit_tim.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -721,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/penyisihan_2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/mail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -749,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/penyisihan_1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiFinal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -767,16 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="60" column="60" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/MailController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="63" column="62" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
-          <folding>
-            <element signature="e#46#82#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,16 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/base.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="77" column="15" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
-          <folding>
-            <element signature="e#20792#20798#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -829,40 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Tim.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiPenyisihan1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#46#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Mahasiswa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -907,35 +734,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/post.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/uiux.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        <state relative-caret-position="-1020">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/bisnis-tik.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="150">
           <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="49" column="134" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/game.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
@@ -949,31 +762,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/game.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="49" column="134" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mails/lolos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="71" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/KompetisiPenyisihan1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="106" column="58" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mails/daftar.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/MailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="66" column="19" selection-start-line="61" selection-start-column="16" selection-end-line="66" selection-end-column="19" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Mahasiswa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="83" column="31" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/ppl.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+        <state relative-caret-position="360">
+          <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Tim.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+        <state relative-caret-position="315">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/uiux.blade.php">
+    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/submission_2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <element signature="e#682#700#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/bisnis-tik.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="152" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/penyisihan_1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="101" column="85" selection-start-line="101" selection-start-column="85" selection-end-line="101" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/penyisihan_2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="121" column="85" selection-start-line="121" selection-start-column="85" selection-end-line="121" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/submission_3.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/submission_1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Submission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/final.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+          <caret line="113" column="85" selection-start-line="113" selection-start-column="85" selection-end-line="113" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="30" column="73" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AjaxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="129" column="12" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
         </state>
       </provider>
     </entry>

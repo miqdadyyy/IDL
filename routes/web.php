@@ -27,8 +27,8 @@ Route::get('/kompetisi/{kategori}', 'KompetisiController@getPagesByCategory')->n
 Route::post('/kompetisi/{kategori}/store', 'Admin\KompetisiPenyisihan1@store')->name('kompetisi.store');
 Route::get('/kompetisi/{kategori}/peserta', 'KompetisiController@getPesertasByCategory')->name('kompetisi.peserta');
 
-Route::get('/kompetisi/{kategori}/submit', 'SubmissionController@getPageSubmit')->name('kompetisi.submit.index');
-Route::get('/kompetisi/{kategori}/submit/store', 'SubmissionController@submitFile')->name('kompetisi.submit.store');
+Route::get('/submit/{token}', 'SubmissionController@getPageSubmit')->name('kompetisi.submit.index');
+Route::post('/submit/{token}', 'SubmissionController@submitFile')->name('kompetisi.submit.store');
 
 Route::get('/test', function (){
 

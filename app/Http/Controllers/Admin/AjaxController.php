@@ -24,7 +24,11 @@ class AjaxController extends Controller
 
     public function getPenyisihan1Tim($kategori)
     {
-        $data = Tim::with('mahasiswa', 'pesertas.mahasiswa', 'submissions')->where('id_kategori', $kategori)->where('babak', '=', 1)->get();
+        $data = Tim::with('mahasiswa', 'pesertas.mahasiswa', 'submissions')
+            ->where('id_kategori', $kategori)
+            ->where('babak', '=', 1)
+//            ->orderBy('created_at', 'desc')
+            ->get();
         $index = 1;
         foreach ($data as $d) {
             $d->no = $index++;
@@ -33,7 +37,10 @@ class AjaxController extends Controller
                 array_push($anggota, $p->mahasiswa->nama);
             }
 
-            $d->submission = Submission::where('token', $d->submissionid)->get()->first();
+            $d->submission = Submission::where('token', $d->submissionid)
+                ->orderBy('created_at', 'desc')
+                ->get()
+                ->first();
             $d->anggota = implode($anggota, ', ');
         }
 
@@ -42,7 +49,11 @@ class AjaxController extends Controller
 
     public function getPenyisihan2Tim($kategori)
     {
-        $data = Tim::with('mahasiswa', 'pesertas.mahasiswa', 'submissions')->where('id_kategori', $kategori)->where('babak', '=', 2)->get();
+        $data = Tim::with('mahasiswa', 'pesertas.mahasiswa', 'submissions')
+            ->where('id_kategori', $kategori)
+            ->where('babak', '=', 2)
+//            ->orderBy('created_at', 'desc')
+            ->get();
         $index = 1;
         foreach ($data as $d) {
             $d->no = $index++;
@@ -51,7 +62,10 @@ class AjaxController extends Controller
                 array_push($anggota, $p->mahasiswa->nama);
             }
 
-            $d->submission = Submission::where('token', $d->submissionid)->get()->first();
+            $d->submission = Submission::where('token', $d->submissionid)
+                ->orderBy('created_at', 'desc')
+                ->get()
+                ->first();
             $d->anggota = implode($anggota, ', ');
         }
 
@@ -60,7 +74,11 @@ class AjaxController extends Controller
 
     public function getFinalTim($kategori)
     {
-        $data = Tim::with('mahasiswa', 'pesertas.mahasiswa')->where('id_kategori', $kategori)->where('babak', '=', 3)->get();
+        $data = Tim::with('mahasiswa', 'pesertas.mahasiswa')
+            ->where('id_kategori', $kategori)
+            ->where('babak', '=', 3)
+//            ->orderBy('created_at', 'desc')
+            ->get();
         $index = 1;
         foreach ($data as $d) {
             $d->no = $index++;
@@ -69,7 +87,10 @@ class AjaxController extends Controller
                 array_push($anggota, $p->mahasiswa->nama);
             }
 
-            $d->submission = Submission::where('token', $d->submissionid)->get()->first();
+            $d->submission = Submission::where('token', $d->submissionid)
+                ->orderBy('created_at', 'desc')
+                ->get()
+                ->first();
             $d->anggota = implode($anggota, ', ');
         }
 
@@ -102,12 +123,23 @@ class AjaxController extends Controller
 
     public function downloadFile($id)
     {
-        $file = Submission::findOrFail($id);
-        $file_path = public_path() . '/' . $file->file_path;
-        if (file_exists($file_path)) {
-            return Response::download($file_path, $file->judul . '.pdf');
+        $file = Submission::with('tim.kategori')
+            ->where('token', $id)
+            ->orderBy('created_at', 'desc')
+            ->get()
+            ->first();
+
+        if ($file == null) {
+            return redirect()->back()->with('error', 'File not found');
         }
-        return 'Error';
+
+        $file_path = public_path() . '/uploads/' . $file->file_path;
+        if (file_exists($file_path)) {
+            $name = $file->tim->kategori->nama_kategori . '_' . $file->tim->nama_tim . '_' . $file->judul . '.' . pathinfo($file_path, PATHINFO_EXTENSION);
+            return Response::download($file_path, $name);
+        }
+
+        return redirect()->back()->with('error', 'File not found');
     }
 
     public function getTimsData()
@@ -127,25 +159,26 @@ class AjaxController extends Controller
         ];
     }
 
-    public function getMahasiswasData(){
+    public function getMahasiswasData()
+    {
         $_angkatan = ['2015', '2016', '2017', '2018'];
         $_prodi = ['Sistem Informasi', 'Teknologi Informasi', 'Informatika'];
 
         $mahasiswas = Mahasiswa::get();
         $data = [];
 
-        foreach ($_prodi as $prodi){
-            foreach ($_angkatan as $angkatan){
+        foreach ($_prodi as $prodi) {
+            foreach ($_angkatan as $angkatan) {
                 $dd[$angkatan] = 0;
             }
             $data[$prodi] = $dd;
         }
 
-        foreach ($mahasiswas as $mahasiswa){
+        foreach ($mahasiswas as $mahasiswa) {
             $ang = substr(($mahasiswa->nim . ''), 0, 2);
             $prodi = substr(($mahasiswa->nim . ''), -4, 1);
 
-            $ang = "20".$ang;
+            $ang = "20" . $ang;
 
             $prodi = $prodi == 1 ? "Sistem Informasi" : ($prodi == 2 ? "Teknologi Informasi" : "Informatika");
             $data[$prodi][$ang]++;
@@ -154,14 +187,16 @@ class AjaxController extends Controller
         return ["data" => $data, "angkatan" => $_angkatan, "prodi" => $_prodi];
     }
 
-    public function getNilai($id, $babak){
+    public function getNilai($id, $babak)
+    {
         return Penilaian::select('nilai')
             ->where('id_tim', $id)
             ->where('babak', $babak)
             ->get()->first()->nilai;
     }
 
-    public function setNilai(Request $request){
+    public function setNilai(Request $request)
+    {
         $id = $request->tim;
         $nilai = $request->nilai;
         $babak = $request->babak;

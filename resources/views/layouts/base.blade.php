@@ -13,6 +13,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Lato:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <!-- Bootstrap CSS File -->
     <link href="{{ asset('assets/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -25,9 +26,10 @@
     <!-- Main Stylesheet File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
-    @yield('css')
 
-    <!-- =======================================================
+@yield('css')
+
+<!-- =======================================================
       Template Name: Solid
       Template URL: https://templatemag.com/solid-bootstrap-business-template/
       Author: TemplateMag.com
@@ -73,9 +75,20 @@
 <script src="{{ asset('assets/lib/isotope/isotope.min.js') }}"></script>
 <script src="{{ asset('assets/lib/hover/hoverdir.js') }}"></script>
 <script src="{{ asset('assets/lib/hover/hoverex.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 <!-- Template Main Javascript File -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
+
+<script>
+    @if($message = Session::get('error'))
+    toastr.error('{{ $message }}', 'Error')
+    @endif
+
+    @if($message = Session::get('success'))
+    toastr.success('{{ $message }}', 'Success')
+    @endif
+</script>
 
 @yield('js')
 
