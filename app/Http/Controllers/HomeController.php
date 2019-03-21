@@ -26,7 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         $kategoris = Kategori::get();
-        $posts = Post::with('user')->paginate(10);
+        $posts = Post::with('user')
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
 //        return $posts;
         return view('pages.home', compact('kategoris', 'posts'));
     }

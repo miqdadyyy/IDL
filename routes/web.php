@@ -30,6 +30,7 @@ Route::get('/kompetisi/{kategori}/peserta', 'KompetisiController@getPesertasByCa
 Route::get('/submit/{token}', 'SubmissionController@getPageSubmit')->name('kompetisi.submit.index');
 Route::post('/submit/{token}', 'SubmissionController@submitFile')->name('kompetisi.submit.store');
 
+
 Route::get('/test', function (){
 
     $text = "lorem ipsum dolor sit amet";
@@ -48,9 +49,11 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
 
     Route::resource('mahasiswa', 'MahasiswaController');
     Route::resource('tim', 'TimController');
+    Route::resource('post-image', 'PostImageController');
     Route::get('penyisihan-1/set-nilai', 'KompetisiPenyisihan1@getSetNilaiPages')->name('penyisihan-1.set-nilai');
     Route::get('penyisihan-2/set-nilai', 'KompetisiPenyisihan2@getSetNilaiPages')->name('penyisihan-2.set-nilai');
     Route::get('final/set-nilai', 'KompetisiFinal@getSetNilaiPages')->name('final.set-nilai');
+
 
     Route::group(['middleware' => ['ormawa']], function (){
         Route::post('penyisihan-1/destroy/{tim}', 'KompetisiPenyisihan1@destroy')->name('tim.destroy');
@@ -81,6 +84,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::get('ajax/nilai/{id}/{babak}', 'AjaxController@getNilai')->name('ajax.get-nilai');
     Route::post('ajax/nilai', 'AjaxController@setNilai')->name('ajax.set-nilai');
     Route::get('ajax/download/{path}', 'AjaxController@downloadFile')->name('ajax.download');
+    Route::get('ajax/images', 'AjaxController@getImages')->name('images.ajax');
 
     Route::get('post/', 'PostController@index')->name('post.index');
     Route::get('post/create', 'PostController@create')->name('post.create');

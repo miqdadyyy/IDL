@@ -6,11 +6,14 @@ use App\Kategori;
 use App\Mahasiswa;
 use App\Penilaian;
 use App\Post;
+use App\PostImage;
 use App\Submission;
 use App\Tim;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 use Yajra\DataTables\DataTables;
 use App\Http\Controllers\Controller;
 
@@ -19,7 +22,7 @@ class AjaxController extends Controller
 {
     public function getPost()
     {
-        return DataTables::of(Post::with('user')->get())->make(true);
+        return DataTables::of(Post::with('user')->orderBy('created_at', 'desc')->get())->make(true);
     }
 
     public function getPenyisihan1Tim($kategori)
@@ -202,5 +205,14 @@ class AjaxController extends Controller
         $babak = $request->babak;
         $status = Penilaian::setNilai($id, $nilai, $babak);
         return $status == true ? 1 : 0;
+    }
+
+    public function getImages(){
+        $images = PostImage::get();
+        foreach ($images as $image){
+            $image->url = URL::to('/') . $image->url;
+        }
+
+        return $images;
     }
 }

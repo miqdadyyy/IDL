@@ -12,6 +12,7 @@
             <ul class="treeview-menu">
                 <li><a class="treeview-item {{ request()->is('admin/post') ? 'active' : '' }}" href="{{ route('admin.post.index') }}"><i class="icon fa fa-circle-o"></i> Posts</a></li>
                 <li><a class="treeview-item {{ request()->is('admin/post/create') ? 'active' : '' }}" href="{{ route('admin.post.create') }}"><i class="icon fa fa-circle-o"></i> Create Post</a></li>
+                <li><a class="treeview-item {{ request()->is('admin/post-image') ? 'active' : '' }}" href="{{ route('admin.post-image.index') }}"><i class="icon fa fa-circle-o"></i>Upload Image</a></li>
             </ul>
         </li>
 

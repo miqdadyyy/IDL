@@ -22,7 +22,8 @@
                         |
                         <csmall2>Oleh: {{ $post->user->name }}</csmall2>
                     </p>
-                    {!! substr($post->description, 0, 100) !!}
+                    {!! strip_tags(substr($post->description, 0, 100)) !!}
+
                     <p><a href="{{ route('post.show', ['post' => $post->id]) }}">[Read More]</a></p>
                     <div class="hline"></div>
                     <div class="spacing"></div>

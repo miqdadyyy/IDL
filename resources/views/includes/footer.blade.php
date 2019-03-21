@@ -4,24 +4,26 @@
             <div class="col-lg-4">
                 <h4>About</h4>
                 <div class="hline-w"></div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>Acara tahunan oleh Himasif, Himatif dan LaOS dengan kategori lomba yang ada di Gemastik</p>
             </div>
             <div class="col-lg-4">
-                <h4>Social Links</h4>
+                <h4>Kontak</h4>
                 <div class="hline-w"></div>
-                <p>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-tumblr"></i></a>
-                </p>
+                <div class="col-md-9">
+                    <p>Email : idleilkom@gmail.com</p>
+                    <p>0895-3295-42125 (Ervian)</p>
+                    <p>0895-3852-50387 (Ilham)</p>
+                </div>
+
+                <div class="col-md-3">
+                    <p><a href="https://www.instagram.com/idleague_ilkom/"><i class="fa fa-instagram"></i></a></p>
+                </div>
             </div>
             <div class="col-lg-4">
-                <h4>Our Address</h4>
+                <h4>Alamat</h4>
                 <div class="hline-w"></div>
                 <p>
-                    Some Ave, 987,<br/> 23890, New York,<br/> United States.<br/>
+                    Jl. Kalimantan No.37, Krajan Timur, Sumbersari, Kabupaten Jember, Jawa Timur 68121
                 </p>
             </div>
 

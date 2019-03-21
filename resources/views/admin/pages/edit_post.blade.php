@@ -7,7 +7,16 @@
 {{--Custom CSS--}}
 
 @section('css')
+    <!-- Include external CSS. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
 
+    <!-- Include Editor style. -->
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.3/css/froala_editor.pkgd.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.3/css/froala_style.min.css" rel="stylesheet"
+          type="text/css"/>
 @endsection
 
 {{--App Title--}}
@@ -27,7 +36,7 @@
                     <div class="form-group">
                         <label for="titlePost">Judul</label>
                         <input class="form-control" id="titlePost" type="text" aria-describedby="titleHelp" name="title"
-                               placeholder="Enter Title" value="{{ $post->title }}">
+                               placeholder="Enter Title" value="{{ $post->title }}" required>
                         <small class="form-text text-muted" id="titleHelp">
                             Judul
                         </small>
@@ -35,7 +44,7 @@
 
                     <div class="form-group">
                         <label for="postDescription">Description</label>
-                        <textarea class="form-control" name="description" rows="10">{{ $post->description }}</textarea>
+                        <textarea class="form-control" name="description" rows="10" required id="editor">{{ $post->description }}</textarea>
                     </div>
                     <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Publish</button>
                 </form>
@@ -47,5 +56,18 @@
 {{--Custom Javascript--}}
 
 @section('js')
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
 
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/froala-editor@2.9.3/js/froala_editor.pkgd.min.js"></script>
+
+    <script> $(function() { $('#editor').froalaEditor({
+            imageManagerLoadURL: "{{ route('admin.images.ajax') }}",
+            imageManagerLoadMethod: "GET",
+        }) }); </script>
 @endsection
