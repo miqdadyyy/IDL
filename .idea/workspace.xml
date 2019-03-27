@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d386a0c3-7f9a-4014-b92f-7ec5339834bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/bisnis-tik.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/bisnis-tik.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/game.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/game.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/iot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/iot.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/ppl.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/ppl.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kompetisi/uiux.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/kompetisi/uiux.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/peserta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/peserta.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="29" column="86" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+            <state relative-caret-position="255">
+              <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -120,9 +118,9 @@
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/smart-city.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/uiux.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/iot.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php" />
       </list>
     </option>
   </component>
@@ -485,12 +483,12 @@
       <workItem from="1552897850841" duration="3794000" />
       <workItem from="1553096298821" duration="10006000" />
       <workItem from="1553153543287" duration="10841000" />
-      <workItem from="1553651162671" duration="3961000" />
+      <workItem from="1553651162671" duration="4103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163413000" />
+    <option name="totallyTimeSpent" value="163555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -903,13 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/ctf.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -919,8 +910,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/cpc.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="29" column="86" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+        <state relative-caret-position="255">
+          <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kompetisi/pkm-go.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
         </state>
       </provider>
     </entry>
