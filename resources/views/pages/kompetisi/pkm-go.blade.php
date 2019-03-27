@@ -27,11 +27,11 @@
     <div class="container mtb">
         <div class="row">
             <div class="col-lg-6">
-                <img class="img-responsive" src="img/agency.jpg" alt="">
+                <img class="img-responsive" src="{{ asset('assets/img/kategori/pkm.png') }}" alt="">
             </div>
 
             <div class="col-lg-6">
-                <h4>More About Our Agency.</h4>
+                <h4>PKM-GO</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book.
@@ -45,9 +45,19 @@
                     the word in classical literature, discovered the
                     undoubtable source.</p>
                 <p>
-                    <br/>
-                    <a href="contact.html" class="btn btn-theme">Rule Book</a>
-                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->id]) }}" class="btn btn-theme">Daftar Peserta</a>
+                <p><b>Rulebook : </b></p>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-AI.pdf') }}" class="btn btn-theme">PKM-AI</a>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-GFK.pdf') }}" class="btn btn-theme">PKM-GFK</a>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-GT.pdf') }}" class="btn btn-theme">PKM-GT</a>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-K.pdf') }}" class="btn btn-theme">PKM-K</a>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-KC.pdf') }}" class="btn btn-theme">PKM-KC</a>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-M.pdf') }}" class="btn btn-theme">PKM-M</a>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-P.pdf') }}" class="btn btn-theme">PKM-P</a>
+                <a href="{{ asset('assets/rulebook/pkm/PKM-T.pdf') }}" class="btn btn-theme">PKM-T</a>
+                <p><b>Lampiran : </b></p>
+                <a href="{{ asset('assets/rulebook/pkm/LAMPIRAN.pdf') }}" class="btn btn-theme">Lampiran</a>
+                <br>
+                <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->id]) }}" class="btn btn-theme">Daftar Peserta</a>
                 </p>
             </div>
         </div>
@@ -60,13 +70,15 @@
                 <div class="col-lg-8 col-lg-offset-2" style="color: #fff;">
                     <h1>Register</h1>
 
-                    <form class="contact-form" role="form" action="{{ route('kompetisi.store', ['kategori' => $kategori->id]) }}"
+                    <form class="contact-form" role="form"
+                          action="{{ route('kompetisi.store', ['kategori' => $kategori->id]) }}"
                           method="POST">
                         @csrf
                         <input type="hidden" value="{{ $kategori->id }}" name="kategori">
                         <div class="form-group">
                             <label for="" style="float: left;">Nama Tim</label>
-                            <input type="name" name="nama_tim" class="form-control" id="contact-name" value="{{ old('nama_tim') }}"
+                            <input type="name" name="nama_tim" class="form-control" id="contact-name"
+                                   value="{{ old('nama_tim') }}"
                                    placeholder="Nama Tim" required>
                             <div class="validate"></div>
                         </div>
@@ -74,25 +86,29 @@
                         <div>
                             <div class="form-group">
                                 <label for="" style="float: left;">Nama Ketua Tim</label>
-                                <input type="name" name="nama[]" class="form-control" placeholder="Nama" required value="{{ old('nama[0]') }}">
+                                <input type="name" name="nama[]" class="form-control" placeholder="Nama" required
+                                       value="{{ old('nama[0]') }}">
                                 <div class="validate"></div>
                             </div>
 
                             <div class="form-group">
                                 <label for="" style="float: left;">NIM Ketua Tim</label>
-                                <input type="number" name="nim[]" class="form-control" placeholder="NIM" required value="{{ old('nim[1]') }}">
+                                <input type="number" name="nim[]" class="form-control" placeholder="NIM" required
+                                       value="{{ old('nim[1]') }}">
                                 <div class="validate"></div>
                             </div>
 
                             <div class="form-group">
                                 <label for="" style="float: left;">Email Ketua Tim</label>
-                                <input type="email" name="email[]" class="form-control" placeholder="Email" required value="{{ old('email[1]') }}">
+                                <input type="email" name="email[]" class="form-control" placeholder="Email" required
+                                       value="{{ old('email[1]') }}">
                                 <div class="validate"></div>
                             </div>
 
                             <div class="form-group">
                                 <label for="" style="float: left;">No HP (WA) Ketua Tim</label>
-                                <input type="text" name="no_hp[]" class="form-control" placeholder="No HP" required value="{{ old('no_hp[0]') }}">
+                                <input type="text" name="no_hp[]" class="form-control" placeholder="No HP" required
+                                       value="{{ old('no_hp[0]') }}">
                                 <div class="validate"></div>
                             </div>
                         </div>

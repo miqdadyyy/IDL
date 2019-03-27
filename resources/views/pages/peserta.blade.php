@@ -24,12 +24,18 @@
 
             <div class="col-lg-8 col-lg-offset-2">
 
-                @foreach($tims as $tim)
-                    <div>
-                        {{ $tim->nama_tim }}
-                        <hr>
-                    </div>
-                @endforeach
+                @if(count($tims) > 0)
+                    @foreach($tims as $tim)
+                        <div>
+                            {{ $tim->nama_tim }}
+                            <hr>
+                        </div>
+                    @endforeach
+
+                @else
+                    <h3 style="text-align: center; opacity: 0.4">Belum peserta dalam
+                        kategori {{ $kategori->nama_kategori }}</h3>
+                @endif
             </div>
 
             {{ $tims->links() }}
