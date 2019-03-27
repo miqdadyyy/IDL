@@ -32,11 +32,7 @@
 
             <div class="col-lg-6">
                 <h4>Pengembangan Aplikasi Game</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. </p>
+                <p>Pengembangan game adalah salah satu bidang pengembangan yang berfpkus pada sebuah game, dimana game ini akan Lomba pengembangan aplikasi permainan mendorong peserta untuk berkreasi dan berinovasi untuk mengembangkan aplikasi permainan yang mampu berjalan dengan baik untuk memenuhi tujuan yang ingin dicapai, memperlihatkan sisi pendidikan, mempunyai dampak dan manfaat, sekaligus mengandung unsur hiburan (entertainment value) dari sebuah permainan itu sendiri. </p>
                 <p>
                     <br/>
                     <a href="{{ asset('assets/rulebook/PAP.pdf') }}" class="btn btn-theme">Rule Book</a>

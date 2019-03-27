@@ -32,11 +32,15 @@
 
             <div class="col-lg-6">
                 <h4>Capture The Flag</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. </p>
+                <p>
+                    Capture the Flag adalah salah satu jenis dari kompetisi hacking yang dimana mengharuskan seorang / tim untuk mengambil sebuah file / string yang sudah disembunyikan sistem yang dimana disebut dengan istilah “Flag”. Berbeda dari lomba lainnya seperti competitive programming yang dimana alatnya disediakan oleh panitia, Peserta CTF biasanya akan diminta untuk membawa peralatan (laptop/alat lainnya) sendiri dan diperbolehkan mempersiapkan script-script / programnya yang sudah ada dari waktu sebelum pertandingan.
+                </p>
+                <p>
+                    Untuk tipe Capture the Flag sendiri ada berbagai macam, ada yang tipenya jeopardy, yang dimana jeopardy ini menggunakan server untuk menyimpan soal, yang dimana soalnya bisa berbentuk web exploitation, reverse engineering, binary exploitation, forensic, cryptography, steganography, dan lain lain dengan tujuan yang tetap sama yaitu mencari string/flag yang disembunyikan oleh server.
+                </p>
+                <p>
+                    Untuk tipe lainnya ada Attack and Defense (War) yang dimana masing-masing peserta / tim akan diberikan virtual machine / image server. Yang nantinya peserta akan diminta menghardening sistem tersebut selamat periode waktu tertentu (fase bertahan), lalu nantinya akan masuk ke fase selanjutnya yaitu fase menyerang  yang dimana para competitor akan saling meyerang satu sistem dengan yang lainnya. Yang tujuan mendapatkan pointnya bisa berbeda, bisa dengan mendapatkan flag juga. Atau bisa dihitung dari waktu downtime yang dialami oleh competitor lainnya. (jadi pemenang dihitung dari waktu uptime server terbanyak).
+                </p>
                 <p>
                     <br/>
                     <a href="contact.html" class="btn btn-theme">Rule Book</a>

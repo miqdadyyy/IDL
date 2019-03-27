@@ -13,21 +13,31 @@
     <div id="blue">
         <div class="container">
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-md-12">
-                    <img src="{{ asset('assets/img/IDL.png') }}" alt="" style="width: 17%; margin-bottom: 20px;" class="center-block">
+                <div class="col-md-6">
+                    <img src="{{ asset('assets/img/IDL.png') }}" alt="" style="width: 50%; margin-bottom: 40px" class="center-block">
+                    <h3 class="text-center" style="color: white">Inovasi IT dalam pembangungan berkelanjutan untuk mempersiapkan revolusi industri 4.0</h3>
                 </div>
-                <p class="text-center" style="color: white">Presented by : </p>
+                <div class="col-md-6">
+                    <p class="text-center" style="color: white; font-size: 20px;">Presented by : </p>
+                    <div class="col-md-12 text-center">
+                        <div class="col-md-6" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
+                            <img src="{{ asset('assets/img/BITS.png') }}" alt="" style="vertical-align: center">
+                        </div>
+                        <div class="col-md-6" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
+                            <img src="{{ asset('assets/img/LA.png') }}" alt="" style="vertical-align: center">
+                        </div>
+                        <div class="col-md-6" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
+                            <img src="{{ asset('assets/img/ITEC.png') }}" alt="" style="vertical-align: center">
+                        </div>
+                    </div>
+                </div>
+                <br>
                 <div class="col-md-12 text-center">
-                    <div class="col-md-4" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
-                        <img src="{{ asset('assets/img/BITS.png') }}" alt="" style="width: 50%; vertical-align: center">
-                    </div>
-                    <div class="col-md-4" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
-                        <img src="{{ asset('assets/img/LA.png') }}" alt="" style="width: 55%; vertical-align: center">
-                    </div>
-                    <div class="col-md-4" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
-                        <img src="{{ asset('assets/img/ITEC.png') }}" alt="" style="width: 55%; vertical-align: center">
-                    </div>
+                    <img src="{{ asset('assets/img/HIMASIF.png') }}" alt="" style="width: 5%">
+                    <img src="{{ asset('assets/img/LAOS.png') }}" alt="" style="width: 4%">
+                    <img src="{{ asset('assets/img/HIMATIF.png') }}" alt="" style="width: 6%">
                 </div>
+
             </div>
         </div>
     </div>

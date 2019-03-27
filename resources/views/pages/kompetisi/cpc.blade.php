@@ -32,11 +32,7 @@
 
             <div class="col-lg-6">
                 <h4>Competitive Programming Competition</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. </p>
+                <p>Competitive Programming Competition adalah lomba menyelesaikan suatu permasalahan yang ada dengan bahasa pemrograman. Dalam Competitive Programming tidak diperlukan User Interface atau GUI sehingga program yang dibuat hanya program sederhana yang berjalan pada command line dan hanya perlu membaca masukan dan menghasilkan keluaran saja. Selain itu program yang dibuat terdapat batasan waktu dan memory yang digunakan. </p>
                 <p>
                     <br/>
                     <a href="contact.html" class="btn btn-theme">Rule Book</a>
