@@ -36,7 +36,7 @@
                 <p>
                     <br/>
                     <a href="{{ asset('assets/rulebook/Bisnis TIK.pdf') }}" class="btn btn-theme">Rule Book</a>
-                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->id]) }}" class="btn btn-theme">Daftar Peserta</a>
+                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}" class="btn btn-theme">Daftar Peserta</a>
                 </p>
             </div>
         </div>

@@ -32,15 +32,18 @@
 
             <div class="col-lg-6">
                 <h4>UIUX</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. </p>
+                <p>Lomba Desain User Interface dan User Experience (UI & UX) adalah lomba
+                    desain produk yang berorientasi kepada tampilan, kenyamanan dan
+                    kemudahan (user) ketika menggunakannya. Dalam lomba ini yang menjadi
+                    acuan adalah pengalaman pengguna dalam mengoperasikan aplikasi tersebut
+                    secara menyeluruh. Para peserta merancang suatu antarmuka yang baik
+                    dengan menggunakan metode sehingga dapat menghasilkan desain aplikasi
+                    yang memiliki kualitas UI UX yang baik.
+                </p>
                 <p>
                     <br/>
                     <a href="{{ asset('assets/rulebook/ITEC.pdf') }}" class="btn btn-theme">Rule Book</a>
-                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->id]) }}" class="btn btn-theme">Daftar Peserta</a>
+                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}" class="btn btn-theme">Daftar Peserta</a>
                 </p>
             </div>
         </div>

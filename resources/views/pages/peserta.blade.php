@@ -21,17 +21,27 @@
 
     <div class="container mtb">
         <div class="row">
-
             <div class="col-lg-8 col-lg-offset-2">
-
                 @if(count($tims) > 0)
-                    @foreach($tims as $tim)
-                        <div>
-                            {{ $tim->nama_tim }}
-                            <hr>
-                        </div>
-                    @endforeach
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($tims as $key => $tim)
+                        <tr>
+                            <th scope="row">{{ $key+1 }}</th>
+                            <td>{{ $tim->nama_tim }}</td>
+                            <td>{{ isset($tim->nilai[0]->nilai) ? $tim->nilai[0]->nilai : '-' }}</td>
+                        </tr>
+                        @endforeach
+                        </tbody>
 
+                    </table>
                 @else
                     <h3 style="text-align: center; opacity: 0.4">Belum peserta dalam
                         kategori {{ $kategori->nama_kategori }}</h3>

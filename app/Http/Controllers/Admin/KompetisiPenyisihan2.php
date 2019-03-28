@@ -47,7 +47,7 @@ class KompetisiPenyisihan2 extends Controller
     {
         $tims = $request->tims;
         $tahap = "tahap 2";
-        $kategori = Kategori::where('kategori', $id_kategori)->get()->first()->nama_kategori;
+        $kategori = Kategori::where('kategori', $id_kategori)->get()->first();
         $mailer = app()->make(\Snowfire\Beautymail\Beautymail::class);
         foreach($tims as $tim){
             Tim::updateKompetisi($tim, 2);

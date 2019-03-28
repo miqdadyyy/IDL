@@ -61,9 +61,7 @@ class KompetisiPenyisihan1 extends Controller
      */
     public function store($id_kategori, Request $request)
     {
-//        return $request;
-
-        $kategori = Kategori::where('kategori', $id_kategori)->get()->first();
+        $kategori = Kategori::with('ormawa')->find($id_kategori);
 
         $mahasiswas = [];
         for($i=0; $i<count($request->nama); $i++){
@@ -86,6 +84,7 @@ class KompetisiPenyisihan1 extends Controller
                 continue;
             }
             $mhs = Mahasiswa::createMahasiswa($mahasiswa["nim"], $mahasiswa["nama"], $mahasiswa["email"], $mahasiswa["no_hp"]);
+
             array_push($pesertas, $mhs);
         }
 
@@ -102,9 +101,9 @@ class KompetisiPenyisihan1 extends Controller
                 continue;
             }
             $email = $mahasiswa["email"];
-            $mailer->send('mails.daftar', compact('tim', 'kategori', 'kode'), function ($message) use ($email) {
+            $mailer->send('mails.daftar', compact('tim', 'kategori', 'kode'), function ($message) use ($email, $kategori) {
                 $message
-                    ->from(strtolower(Auth::user()->name) . '@idle.ilkom.unej.ac.id')
+                    ->from(strtolower($kategori->ormawa->nama_ormawa) . '@idle.ilkom.unej.ac.id')
                     ->to($email)
                     ->subject('Pendaftaran IDLe');
             });
@@ -159,8 +158,8 @@ class KompetisiPenyisihan1 extends Controller
     public function destroy($id)
     {
         if (Tim::deleteTim($id)) {
-            return redirect()->back();
+            return redirect()->back()->with('Tim berhasil dihapus');
         }
-        return redirect()->back();
+        return redirect()->back()->with('Tim gagal dihapus');
     }
 }

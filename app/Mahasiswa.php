@@ -48,8 +48,6 @@ class Mahasiswa extends Model
             return $mahasiswa;
         }
 
-        return $nim . ' ' . $nama;
-
         $mahasiswa = Mahasiswa::create([
             'nim' => $nim,
             'nama' => $nama,

@@ -40,7 +40,7 @@
                     </table>
                     <form action="{{ route('admin.tim.destroy', ['tim' => -1]) }}" method="post" id="delete-form">
                         @csrf
-                        @method('DELETE')
+                        @method('POST')
                     </form>
                 </div>
             </div>

@@ -44,6 +44,7 @@
                     </table>
                     <form action="{{ route('admin.final.destroy', ['tim' => -1, 'kategori' => $kategori->kategori ]) }}"
                           method="post" id="delete-form">
+                        @method('DELETE')
                         @csrf
                     </form>
                 </div>

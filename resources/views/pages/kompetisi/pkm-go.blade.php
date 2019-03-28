@@ -50,7 +50,7 @@
                 <p><b>Lampiran : </b></p>
                 <a href="{{ asset('assets/rulebook/pkm/LAMPIRAN.pdf') }}" class="btn btn-theme">Lampiran</a>
                 <br>
-                <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->id]) }}" class="btn btn-theme">Daftar Peserta</a>
+                <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}" class="btn btn-theme">Daftar Peserta</a>
                 </p>
             </div>
         </div>

@@ -13,10 +13,11 @@
 
     @include('beautymail::templates.sunny.contentEnd')
 
+    @include('beautymail::templates.sunny.contentStart')
+
     @if($kategori->kategori == 'cpc' || $kategori->kategori == 'ctf')
         <p>Silahkan tunggu informasi selanjutnya dari email</p>
     @else
-        @include('beautymail::templates.sunny.contentStart')
         <p>Silahkan submit ke karya tulis dengan klik tombol dibawah : </p>
         @include('beautymail::templates.sunny.button', [
         	'title' => 'Submit',
@@ -24,6 +25,7 @@
         
         <p>atau akses link berikut : <a
                     href="{{ route('kompetisi.submit.index', ['kategori' => $kategori->kategori, 'token' => $kode]) }}">{{ route('kompetisi.submit.index', ['kategori' => $kategori->kategori, 'token' => $kode]) }}</a></p>
-        @include('beautymail::templates.sunny.contentEnd')
     @endif
+
+    @include('beautymail::templates.sunny.contentEnd')
 @stop

@@ -30,8 +30,12 @@ class KompetisiController extends Controller
     public function getPesertasByCategory($kategori)
     {
         $kategoris = Kategori::get();
-        $tims = Tim::where('id_kategori', $kategori)->paginate(20);
-        $kategori = Kategori::find($kategori);
+        $kategori = Kategori::where('kategori', $kategori)->get()->first();
+        $tims = Tim::with('nilais')->where('id_kategori', $kategori->id)->paginate(20);
+
+        foreach ($tims as $tim){
+            $tim->nilai = end($tim->nilais);
+        }
         return view('pages.peserta', compact('kategoris', 'tims', 'kategori'));
     }
 }

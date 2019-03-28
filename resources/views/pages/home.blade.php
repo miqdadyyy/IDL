@@ -15,7 +15,7 @@
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-md-6">
                     <img src="{{ asset('assets/img/IDL.png') }}" alt="" style="width: 50%; margin-bottom: 40px" class="center-block">
-                    <h3 class="text-center" style="color: white">Inovasi IT dalam pembangungan berkelanjutan untuk mempersiapkan revolusi industri 4.0</h3>
+                    <h3 class="text-center" style="color: white"><i>"Inovasi IT dalam pembangungan berkelanjutan untuk mempersiapkan revolusi industri 4.0"</i></h3>
                 </div>
                 <div class="col-md-6">
                     <p class="text-center" style="color: white; font-size: 20px;">Presented by : </p>

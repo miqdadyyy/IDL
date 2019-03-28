@@ -32,15 +32,17 @@
 
             <div class="col-lg-6">
                 <h4>Internet Of Things</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. </p>
+                <p>Lomba Interenet of Things(IoT) merupakan lomba gagasan atau ide seputar
+                    penggunaan IoT pada kehidupan sehari hari. IoT dapat mempermudah
+                    pengguna agar dapat mengontrol benda/perangkat secara langsung oleh
+                    penggunanya. Diharapka para peserta dapat merancang penggunaan IoT
+                    yang unik serta menunjang kebutuhan aktivitas pada masyarakat secara
+                    general.
+                </p>
                 <p>
                     <br/>
                     <a href="{{ asset('assets/rulebook/ITEC.pdf') }}" class="btn btn-theme">Rule Book</a>
-                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->id]) }}" class="btn btn-theme">Daftar Peserta</a>
+                    <a href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}" class="btn btn-theme">Daftar Peserta</a>
                 </p>
             </div>
         </div>
