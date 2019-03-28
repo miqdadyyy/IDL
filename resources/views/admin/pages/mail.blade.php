@@ -7,7 +7,7 @@
 {{--Custom CSS--}}
 
 @section('css')
-
+    @csrf
 @endsection
 
 {{--App Title--}}

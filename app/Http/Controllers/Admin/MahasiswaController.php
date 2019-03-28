@@ -74,7 +74,7 @@ class MahasiswaController extends Controller
     public function update(Request $request, $id)
     {
         Mahasiswa::updateMahasiswa($id, $request->nama, $request->email, $request->no_hp);
-        return redirect()->route('admin.mahasiswa.index');
+        return redirect()->route('admin.mahasiswa.index')->with('success', 'Data berhasil diubah');
     }
 
     /**

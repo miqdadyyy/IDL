@@ -56,7 +56,7 @@ class MailController extends Controller
         foreach ($request->tims as $t) {
             $tim = Tim::with('pesertas.mahasiswa')
                 ->findOrFail($t);
-            foreach($tim->pesertas as $peserta){
+            foreach ($tim->pesertas as $peserta) {
                 $nama = $peserta->mahasiswa->nama;
                 $email = $peserta->mahasiswa->email;
                 $mailer->send('mails.send', compact('text', 'nama'), function ($message) use ($email) {
@@ -68,5 +68,21 @@ class MailController extends Controller
             }
         }
         return redirect()->route('admin.mail.page')->with('success', 'Pesan berhasil dikirim');
+    }
+
+    public function testing()
+    {
+        $mailer = app()->make(\Snowfire\Beautymail\Beautymail::class);
+        $kode = md5('kontol');
+        $kategori = Kategori::with('ormawa')->find(1);
+        $email = 'miqdad.farcha@gmail.com';
+        $tim = Tim::find(5);
+        $mailer->send('mails.daftar', compact('tim', 'kategori', 'kode'), function ($message) use ($email, $kategori) {
+            $message
+                ->from(strtolower($kategori->ormawa->nama_ormawa) . '@idle.ilkom.unej.ac.id')
+                ->to($email)
+                ->subject('Pendaftaran IDLe');
+        });
+
     }
 }

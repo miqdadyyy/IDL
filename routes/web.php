@@ -97,3 +97,5 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::post('mail/mahasiswa', 'MailController@sendMailMahasiswa')->name('mail.mahasiswa');
     Route::post('mail/tim', 'MailController@sendMailTim')->name('mail.tim');
 });
+
+Route::get('/testmail', 'Admin\MailController@testing');

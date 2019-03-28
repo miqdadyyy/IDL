@@ -69,16 +69,15 @@
 
     @if($message = Session::get('success'))
     successNotification('Success : ', "{{ $message }}");
-    {{ session()->flush() }}
+
     @endif
 
     @if($message = Session::get('error'))
     errorNotification('Error : ', "{{ $message }}");
-    {{ session()->flush() }}
+
     @endif
 
 </script>
-
 
 
 <!-- Page specific javascripts-->
