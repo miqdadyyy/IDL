@@ -23,7 +23,9 @@
             <div class="tile">
                 <div class="form-group">
                     <a href="{{ route('admin.penyisihan-2.create', ['kategori' => $kategori->kategori ]) }}"
-                       class="btn btn-primary">Tambah Peserta Penyisihan 2</a>
+                       class="btn btn-primary"><span class="fa fa-plus"></span>Tambah Peserta Penyisihan 2</a>
+                    <a href="{{ route('admin.export.penyisihan-2', ['kategori' => $kategori->id]) }}"
+                       class="btn btn-success"><span class="fa fa-file-excel-o"></span>Cetak XLS</a>
                 </div>
                 <div class="tile-body">
 
@@ -37,7 +39,7 @@
                             <th width="10%">Video</th>
                             <th width="10%">Submission</th>
                             <th width="5%">Tandai</th>
-                            <th width="10%">Action</th>
+                            <th width="5%">Action</th>
                         </tr>
                         </thead>
 
@@ -151,9 +153,9 @@
                     {
                         data: 'id',
                         render: function (data, type, row) {
-                            content = "<button onclick=\"tandaiTim(" + data + ")\" class=\"btn btn-sm btn-warning fa fa-star\" title='Toogle tanda' data-toggle='tooltip'></button>";
+                            content = "<center> <button onclick=\"tandaiTim(" + data + ")\" class=\"btn btn-sm btn-warning fa fa-star\" title='Toogle tanda' data-toggle='tooltip'></button>";
                             content += "<a href=\"/admin/tim/" + data +"/edit/\" class=\"btn btn-sm btn-info fa fa-pencil\" title='Edit tim' data-toggle='tooltip'></a>";
-                            content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-sm btn-danger fa fa-trash\" title='Hapus' data-toggle='tooltip'></button>";
+                            content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-sm btn-danger fa fa-trash\" title='Hapus' data-toggle='tooltip'></button> </center>";
                             return content;
                         }
                     }

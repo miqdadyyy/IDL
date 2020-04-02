@@ -17,9 +17,9 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/register', function(){
-    return redirect('/');
-});
+// Route::get('/register', function(){
+//     return redirect('/');
+// });
 
 Route::get('/post/{post}', 'Admin\PostController@show')->name('post.show');
 
@@ -38,7 +38,7 @@ Route::get('/test', function (){
     $mail->send('mails.send', compact('text'), function($message){
         $message
             ->from('test' . '@idle.ilkom.unej.ac.id')
-            ->to('miqdad.farcha@gmail.com', 'Miqdad Farcha')
+            ->to('inisaya7@yahoo.com', 'Miqdadyyy')
             ->subject('Pesan dari IDLe');
     });
 });
@@ -49,6 +49,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
 
     Route::resource('mahasiswa', 'MahasiswaController');
     Route::resource('tim', 'TimController');
+    Route::post('tim/star/{tim}', 'TimController@tandai')->name('tim.tandai');
     Route::resource('post-image', 'PostImageController');
     Route::get('penyisihan-1/set-nilai', 'KompetisiPenyisihan1@getSetNilaiPages')->name('penyisihan-1.set-nilai');
     Route::get('penyisihan-2/set-nilai', 'KompetisiPenyisihan2@getSetNilaiPages')->name('penyisihan-2.set-nilai');
@@ -56,6 +57,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::post('penyisihan-1/destroy/{tim}', 'KompetisiPenyisihan1@destroy')->name('tim.destroy');
 
     Route::group(['middleware' => ['ormawa']], function (){
+
 
 //        Route::get('penyisihan-1/create/{kategori}', 'KompetisiPenyisihan1@create')->name('penyisihan-1.create');
         Route::post('penyisihan-1/store/{kategori}', 'KompetisiPenyisihan1@store')->name('penyisihan-1.store');
@@ -96,6 +98,12 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::get('mail/', 'MailController@getMailPage')->name('mail.page');
     Route::post('mail/mahasiswa', 'MailController@sendMailMahasiswa')->name('mail.mahasiswa');
     Route::post('mail/tim', 'MailController@sendMailTim')->name('mail.tim');
+
+    Route::get('export/penyisihan-1/{kategori}', 'ExportExcelController@exportPenyisihan1')->name('export.penyisihan-1');
+    Route::get('export/penyisihan-2/{kategori}', 'ExportExcelController@exportPenyisihan2')->name('export.penyisihan-2');
+    Route::get('export/final/{kategori}', 'ExportExcelController@exportFinal')->name('export.final');
+    Route::get('export/tims', 'ExportExcelController@exportTims')->name('export.tims');
+    Route::get('export/mahasiswas', 'ExportExcelController@exportMahasiswas')->name('export.mahasiswas');
 });
 
 Route::get('/testmail', 'Admin\MailController@testing');

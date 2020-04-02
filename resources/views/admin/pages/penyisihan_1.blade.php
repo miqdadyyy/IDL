@@ -21,6 +21,10 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
+              <div class="form-group">
+                  <a href="{{ route('admin.export.penyisihan-1', ['kategori' => $kategori->id]) }}"
+                     class="btn btn-success"><span class="fa fa-file-excel-o"></span>Cetak XLS</a>
+              </div>
                 <div class="tile-body">
                     <table class="table table-hover table-bordered" id="tim-table">
                         <thead>
@@ -31,7 +35,7 @@
                             <th width="%">Anggota</th>
                             <th width="10%">Submission</th>
                             <th width="5%">Tandai</th>
-                            <th width="10%">Action</th>
+                            <th width="5%">Action</th>
                         </tr>
                         </thead>
 
@@ -132,9 +136,9 @@
                     {
                         data: 'id',
                         render: function (data, type, row) {
-                          content = "<button onclick=\"tandaiTim(" + data + ")\" class=\"btn btn-sm btn-warning fa fa-star\" title='Toogle tanda' data-toggle='tooltip'></button>";
+                          content = "<center> <button onclick=\"tandaiTim(" + data + ")\" class=\"btn btn-sm btn-warning fa fa-star\" title='Toogle tanda' data-toggle='tooltip'></button>";
                           content += "<a href=\"/admin/tim/" + data +"/edit/\" class=\"btn btn-sm btn-info fa fa-pencil\" title='Edit tim' data-toggle='tooltip'></a>";
-                          content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-sm btn-danger fa fa-trash\" title='Hapus' data-toggle='tooltip'></button>";
+                          content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-sm btn-danger fa fa-trash\" title='Hapus' data-toggle='tooltip'></button> </center>";
                             return content;
                         }
                     }

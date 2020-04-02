@@ -21,6 +21,10 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
+                <div class="form-group">
+                    <a href="{{ route('admin.export.mahasiswas') }}"
+                       class="btn btn-success"><span class="fa fa-file-excel-o"></span>Cetak XLS</a>
+                </div>
                 <div class="tile-body">
                     <table class="table table-hover table-bordered" id="tim-table">
                         <thead>

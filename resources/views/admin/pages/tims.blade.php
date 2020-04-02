@@ -21,6 +21,10 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
+                <div class="form-group">
+                    <a href="{{ route('admin.export.tims') }}"
+                       class="btn btn-success"><span class="fa fa-file-excel-o"></span>Cetak XLS</a>
+                </div>
                 <div class="tile-body">
                     <table class="table table-hover table-bordered" id="tim-table">
                         <thead>
@@ -28,8 +32,8 @@
                             <th width="5%">No</th>
                             <th width="15%">Nama Tim</th>
                             <th width="">Ketua Tim</th>
-                            <th width="">Babak</th>
-                            <th width="">Kategori</th>
+                            <th width="5%">Babak</th>
+                            <th width="10%">Kategori</th>
                             <th width="10%">Action</th>
                         </tr>
                         </thead>
@@ -84,8 +88,8 @@
                     {
                         data: 'id',
                         render: function (data, type, row) {
-                            content = "<a href='/admin/tim/" + data + "/edit'" + "class='btn btn-info'>Edit</a>";
-                            content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-danger\">Delete</button>";
+                          content = "<a href=\"/admin/tim/" + data +"/edit/\" class=\"btn btn-sm btn-info fa fa-pencil\" title='Edit tim' data-toggle='tooltip'></a>";
+                          content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-sm btn-danger fa fa-trash\" title='Hapus' data-toggle='tooltip'></button> </center>";
                             return content;
                         }
                     }
