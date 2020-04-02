@@ -23,7 +23,8 @@
         @foreach ($errors->all() as $error)
             <li style="color: red">{{ $error }}</li>
         @endforeach
-        <p>File pada babak Final {{ $tim->kategori->nama_kategori }} adalah Proposal akhir dan file presentasi dicompress menjadi ZIP</p>
+        <h2>Dear {{$tim->nama_tim}}, Selamat!</h2>
+        <p>Tim anda telah melewati seluruh tahapan seleksi pada bidang lomba {{ $tim->kategori->nama_kategori }}. Pada tahap final anda diharuskan mengunggah <b>file .ZIP</b> berisi: <italic>proposal akhir</italic> dan <italic>file presentasi</italic></p>
         <div class="row">
             <div class="col-lg-12">
 

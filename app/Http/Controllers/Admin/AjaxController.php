@@ -164,7 +164,7 @@ class AjaxController extends Controller
 
     public function getMahasiswasData()
     {
-        $_angkatan = ['2015', '2016', '2017', '2018'];
+        $_angkatan = ['2016', '2017', '2018', '2019'];
         $_prodi = ['Sistem Informasi', 'Teknologi Informasi', 'Informatika'];
 
         $mahasiswas = Mahasiswa::get();

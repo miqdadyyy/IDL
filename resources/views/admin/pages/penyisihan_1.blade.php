@@ -27,9 +27,10 @@
                         <tr>
                             <th width="5%">No</th>
                             <th width="15%">Nama Tim</th>
-                            <th width="20%">Ketua Tim</th>
+                            <th width="15%">Ketua Tim</th>
                             <th width="%">Anggota</th>
                             <th width="10%">Submission</th>
+                            <th width="5%">Tandai</th>
                             <th width="10%">Action</th>
                         </tr>
                         </thead>
@@ -39,7 +40,13 @@
                         </tbody>
 
                     </table>
-                    <form action="{{ route('admin.tim.destroy', ['tim' => -1]) }}" method="post" id="delete-form">
+                    <form action="{{ route('admin.tim.destroy', ['tim' => -1]) }}"
+                          method="post" id="delete-form">
+                        @csrf
+                    </form>
+                    <form action="{{ route('admin.tim.tandai', ['tim' => 2]) }}"
+                          method="post" id="tandai-tim">
+                        @method('POST')
                         @csrf
                     </form>
                 </div>
@@ -65,6 +72,12 @@
             } else {
 
             }
+        }
+        function tandaiTim(id) {
+            url = $('#tandai-tim').attr('action');
+            url = url.substring(0, url.length-1) + id;
+            url = $('#tandai-tim').attr('action', url);
+            $('#tandai-tim').submit();
         }
     </script>
 
@@ -99,9 +112,19 @@
                         data: 'submission',
                         render: function (data, type, row) {
                             if (data != null) {
-                                return '<a href="/admin/ajax/download/' + data['token'] + '" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i></a>';
+                                return '<a href="/admin/ajax/download/' + data['token'] + '" class="align-items-center"><i class="fa fa-download" aria-hidden="true"></i> Unduh</a>';
                             } else {
                                 return "Belum Melakukan Submission";
+                            }
+
+                        }
+                    },
+                    {   data: 'starred',
+                        render: function (data, type, row) {
+                            if (data == 0) {
+                                return "<center><span class='badge badge-light'><i class='fa fa-star-o' title='Tidak ditandai' data-toggle='tooltip'> </i></span></center>";
+                            } else {
+                                return "<center><span class='badge badge-warning'><i class='fa fa-star' title='Ditandai' data-toggle='tooltip'> </i></span></center>";
                             }
 
                         }
@@ -109,8 +132,9 @@
                     {
                         data: 'id',
                         render: function (data, type, row) {
-                            content = "<a href='/admin/tim/" + data + "/edit'" + "class='btn btn-info'>Edit</a>";
-                            content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-danger\">Delete</button>";
+                          content = "<button onclick=\"tandaiTim(" + data + ")\" class=\"btn btn-sm btn-warning fa fa-star\" title='Toogle tanda' data-toggle='tooltip'></button>";
+                          content += "<a href=\"/admin/tim/" + data +"/edit/\" class=\"btn btn-sm btn-info fa fa-pencil\" title='Edit tim' data-toggle='tooltip'></a>";
+                          content += "<button onclick=\"deletePost(" + data + ")\" class=\"btn btn-sm btn-danger fa fa-trash\" title='Hapus' data-toggle='tooltip'></button>";
                             return content;
                         }
                     }

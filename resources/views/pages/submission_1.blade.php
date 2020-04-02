@@ -23,8 +23,8 @@
         @foreach ($errors->all() as $error)
             <li style="color: red">{{ $error }}</li>
         @endforeach
-
-        <p>File pada babak pertama {{ $tim->kategori->nama_kategori }} adalah proposal dalam format PDF</p>
+        <h2>Halo, {{$tim->nama_tim}}</h2>
+        <p>Pada tahap pertama {{$tim->kategori->nama_kategori}} adalah pengumpulan proposal dalam format <b>.PDF</b></p>
         <div class="row">
             <div class="col-lg-12">
                 <form class="contact-form" role="form" action="{{ route('kompetisi.submit.store', ['token' => $tim->submissionid]) }}" method="POST" enctype="multipart/form-data">
@@ -40,6 +40,8 @@
                         <label for="" style="float: left;">Silahkan masukan file (PDF)</label>
                         <input type="file" name="file" class="form-control" id="contact-name" placeholder="File" required>
                     </div>
+
+                    <small style="color:red">Pastikan ukuran file tidak lebih dari 5 Mb.</small>
 
                     <div class="form-send">
                         <button type="submit" class="btn btn-large">Submit</button>

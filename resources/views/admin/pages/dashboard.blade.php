@@ -5,7 +5,11 @@
 @section('title', 'Admin Dashboard')
 
 {{--Custom CSS--}}
-
+<style media="screen">
+.tile {
+  overflow-x: auto;
+}
+</style>
 @section('css')
 
 @endsection

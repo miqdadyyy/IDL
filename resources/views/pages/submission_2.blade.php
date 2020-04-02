@@ -23,7 +23,8 @@
         @foreach ($errors->all() as $error)
             <li style="color: red">{{ $error }}</li>
         @endforeach
-        <p>Babak dua pengumpulan link video dan pamflet/poster dengan format zip</p>
+        <h2>Halo, {{$tim->nama_tim}}</h2>
+        <p>Pada tahap 2 bidang lomba {{$tim->kategori->nama_kategori}}, tim anda diminta untuk menyantumkan <b>link video</b> yang diunggah pada Youtube dan <b>File .ZIP</b> berisi: <italic><b>Pamflet/ Poster</b> dan <b>Scan KTM Setiap anggota</b></italic>.</p>
         <div class="row">
             <div class="col-lg-12">
 
@@ -46,6 +47,8 @@
                         <label for="" style="float: left;">Silahkan masukan file (ZIP)</label>
                         <input type="file" name="file" class="form-control" id="contact-name" placeholder="File" required>
                     </div>
+
+                    <small style="color:red">Pastikan ukuran file tidak lebih dari 5 Mb.</small>
 
                     <div class="form-send">
                         <button type="submit" class="btn btn-large">Submit</button>

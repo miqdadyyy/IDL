@@ -25,7 +25,7 @@ class Tim extends Model
     /**
      * @var array
      */
-    protected $fillable = ['id_kategori', 'ketua_tim', 'nama_tim', 'submissionid', 'babak', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['id_kategori', 'ketua_tim', 'nama_tim', 'submissionid', 'babak', 'starred','created_at', 'updated_at', 'deleted_at'];
 
     public static function createTim($id_kategori, $ketua_tim, $nama_tim)
     {
@@ -52,7 +52,8 @@ class Tim extends Model
         return false;
     }
 
-    public static function updateTim($id, $nama_tim, $ketua){
+    public static function updateTim($id, $nama_tim, $ketua)
+    {
         $tim = Tim::findOrFail($id);
         if($tim->update([
             'nama_tim' => $nama_tim,

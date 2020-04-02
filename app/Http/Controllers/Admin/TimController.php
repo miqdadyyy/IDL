@@ -103,4 +103,18 @@ class TimController extends Controller
         Tim::deleteTim($id);
         return redirect()->route('admin.tim.index')->with('success', 'Tim Berhasil Dihapus');
     }
+
+    public function tandai($id)
+    {   
+        $tim = Tim::with('pesertas')->findOrFail($id);
+        if($tim->starred == 0){
+            if($tim->update(['starred' => 1])){
+                return redirect()->back();
+            }
+        }else{
+            if($tim->update(['starred' => 0])){
+                return redirect()->back();
+            }
+        }
+    }
 }
