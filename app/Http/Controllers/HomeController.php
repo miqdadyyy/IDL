@@ -32,4 +32,41 @@ class HomeController extends Controller
 //        return $posts;
         return view('pages.home', compact('kategoris', 'posts'));
     }
+
+    public function faq()
+    {
+        $kategoris = Kategori::get();
+        return view('pages.faq', compact('kategoris'));
+    }
+
+    public function ask(Request $request)
+    {
+        $no_bits = '1';     $no_itec = '2';
+        $no_icom = '3';     $no_laosarena = '4';
+
+        $URl = "api.whatsapp.com/send?phone=%T%&text=%M%";
+
+        $kategori = $request['kategori'];
+        $raw_pesan = rawurlencode("Halo... Saya dari tim *".$request['nama_tim']."* Kategori *".$kategori."* ingin bertanya: ".$request['pesan']);
+
+        if($kategori=="PPL" || $kategori=="Bisnis TIK" || $kategori=="Smart City" || $kategori=="PKM-GO" || $kategori=="KTI" )
+        {
+            $target = $no_bits;
+        }else if($kategori=="UI/UX" || $kategori=="IOT"){
+            $target = $no_itec;
+        }else if($kategori=="Game" || $kategori=="CPC"){
+            $target = $no_icom;
+        }else if($kategori=="CTF" ){
+            $target = $no_laosarena;
+        }else{
+          return redirect()->back()->with('error', 'Gagal dikirim');
+        }
+
+        $orig = array("%T%", "%M%");
+        $mod  = array($target, $raw_pesan);
+
+        $pesan = str_replace($orig, $mod, $URl);
+        return redirect('https://'.$pesan);
+    }
+
 }

@@ -8,33 +8,49 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('favicon/favicon-32x32.png') }}" rel="icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{asset('favicon/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Lato:400,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
 
     <!-- Bootstrap CSS File -->
-    <link href="{{ asset('assets/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/--mp---navbar-shrinking-on-scroll.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Article-Clean.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Article-List.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Contact-Form-Clean.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Footer-Clean.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Header-Blue.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Horizontal-scrolling-cards-for-mobile-apps.css') }}">
 
     <!-- Libraries CSS Files -->
-    <link href="{{ asset('assets/lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/lib/prettyphoto/css/prettyphoto.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/lib/hover/hoverex-all.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
 
     <!-- Main Stylesheet File -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
 
 @yield('css')
 
-<!-- =======================================================
-      Template Name: Solid
-      Template URL: https://templatemag.com/solid-bootstrap-business-template/
-      Author: TemplateMag.com
-      License: https://templatemag.com/license/
-    ======================================================= -->
 </head>
 
 <body>
@@ -49,32 +65,14 @@
    ***************************************************************************************************************** -->
 @include('includes.footer')
 
-<div id="copyrights">
-    <div class="container">
-        <p>
-            &copy; Copyrights <strong>Solid</strong>. All Rights Reserved
-        </p>
-        <div class="credits">
-            <!--
-              You are NOT allowed to delete the credit link to TemplateMag with free version.
-              You can delete the credit link only if you bought the pro version.
-              Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/solid-bootstrap-business-template/
-              Licensing information: https://templatemag.com/license/
-            -->
-            Created with Solid template by <a href="https://templatemag.com/">TemplateMag</a>
-        </div>
-    </div>
-</div>
 <!-- / copyrights -->
 
 <!-- JavaScript Libraries -->
-<script src="{{ asset('assets/lib/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/lib/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/lib/php-mail-form/validate.js') }}"></script>
-<script src="{{ asset('assets/lib/prettyphoto/js/prettyphoto.js') }}"></script>
-<script src="{{ asset('assets/lib/isotope/isotope.min.js') }}"></script>
-<script src="{{ asset('assets/lib/hover/hoverdir.js') }}"></script>
-<script src="{{ asset('assets/lib/hover/hoverex.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/bs-init.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+<script src="{{ asset('assets/js/--mp---navbar-shrinking-on-scroll.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 <!-- Template Main Javascript File -->

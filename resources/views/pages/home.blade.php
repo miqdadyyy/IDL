@@ -4,46 +4,71 @@
 
 @section('css')
     <style>
-
+        .container{
+          margin-top: 20pt;
+          margin-bottom: 25pt;
+        }
     </style>
 @endsection
 
 @section('content')
+  <div class="header-blue">
+      <div class="container hero" style="margin-top: 0px;">
+          <div class="row" id="top">
+              <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 bounce animated">
+                  <h1 style="color: rgb(0,0,0);margin-top: 93px;font-family: Nunito, sans-serif;font-style: normal;font-weight: bold;">ILKOM Developer League</h1>
+                  <p style="color: rgba(0,0,0,0.8);font-family: Nunito, sans-serif;">Inovasi IT dalam Sustainable Development Goals untuk mempersiapkan Revolusi Industri 4.0</p>
+                  <p style="color: rgba(0,0,0,0.8);font-family: Nunito, sans-serif;">Powered by</p>
+                  <div style="margin-top: -31px;">
+                      <div class="row">
+                          <div class="col-3 col-md-3" style="padding-right: 0px;padding-left: 0px;"><img src="assets/img/himasif.png" style="height: 80px;"></div>
+                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/himatif.png" style="height: 87px;"></div>
+                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/hmif.png" style="height: 87px;"></div>
+                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/laos.png" style="height: 71px;"></div>
+                      </div>
+                  </div>
+                  <a href="/faq" class="btn btn-success shadow" data-bs-hover-animate="pulse" style="margin-top: 13px;"> Tentang IDLe</a>
+              </div>
+              <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                  <div class="iphone-mockup">
+                      <img class="bounce animated device" src="assets/img/laning2.png" style="width: 402px;">
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
 
-    <div id="blue">
-        <div class="container">
-            <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-md-6">
-                    <img src="{{ asset('assets/img/IDL.png') }}" alt="" style="width: 50%; margin-bottom: 40px" class="center-block">
-                    <h3 class="text-center" style="color: white"><i>"Inovasi IT dalam pembangungan berkelanjutan untuk mempersiapkan revolusi industri 4.0"</i></h3>
+    <div style="padding-botom: 45px;">
+        <div class="row">
+            <div class="col-md-4 align-self-center">
+                <h1 class="text-center" style="color: rgb(0,0,0);font-family: Nunito, sans-serif;font-weight: bold;">Bidang Lomba</h1>
+                <!-- <p class="text-center">Lorem Ipsum Dolor lur</p> -->
+            </div>
+            <div class="col-md-8" style="padding-bottom: 20px;">
+                <div class="d-flex flex-row multiple-item-slider" style="margin-top: 18px;width: auto;height: auto;">
+                    <section class="horitzontalScroll">
+                        @foreach($kategoris as $kategori)
+                        <a href="{{ route('kompetisi.index', ['kategori' => $kategori->kategori]) }}" style="margin-right: 0px;width: auto;height: auto;">
+                            <div class="horitzontalScrollContent mr-3 ml-2">
+                                <div class="card shadow">
+                                    <div class="card-body"><img src="{{asset('assets/img/kategori/'.$kategori->kategori.'.jpg')}}" style="height: 194px;">
+                                        <h4 class="text-center card-title" style="color: rgb(0,0,0);font-family: Nunito, sans-serif;font-style: normal;font-weight: bold;margin-top: 7px;">{{ $kategori->nama_kategori }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        @endforeach
+                    </section>
                 </div>
-                <div class="col-md-6">
-                    <p class="text-center" style="color: white; font-size: 20px;">Presented by : </p>
-                    <div class="col-md-12 text-center">
-                        <div class="col-md-6" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
-                            <img src="{{ asset('assets/img/BITS.png') }}" alt="" style="vertical-align: center">
-                        </div>
-                        <div class="col-md-6" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
-                            <img src="{{ asset('assets/img/LA.png') }}" alt="" style="vertical-align: center">
-                        </div>
-                        <div class="col-md-6" style="min-height: 100px; margin-bottom: 30px; margin-top: 30px">
-                            <img src="{{ asset('assets/img/ITEC.png') }}" alt="" style="vertical-align: center">
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="col-md-12 text-center">
-                    <img src="{{ asset('assets/img/HIMASIF.png') }}" alt="" style="width: 5%">
-                    <img src="{{ asset('assets/img/LAOS.png') }}" alt="" style="width: 4%">
-                    <img src="{{ asset('assets/img/HIMATIF.png') }}" alt="" style="width: 6%">
-                </div>
-
             </div>
         </div>
     </div>
 
-    <div class="container mtb">
+    <div class="container mtb" id="berita">
         <div class="row">
+            <div class="col-md-12 align-self-center">
+                <h1 class="text-center" style="color: rgb(0,0,0);font-family: Nunito, sans-serif;font-weight: bold;">Berita Terbaru</h1>
+            </div>
             <div class="col-lg-12">
                 @if(count($posts) > 0)
                     @foreach($posts as $post)
@@ -69,4 +94,12 @@
         </div>
     </div>
 
+    <div class="box-event">
+            <div class="d-flex flex-row justify-content-center">
+                <img class="events" src="{{asset('assets/img/bits.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/itec.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/logo_idle.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/laos_arena.png')}}" alt="">
+            </div>
+    </div>
 @endsection

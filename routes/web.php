@@ -15,6 +15,9 @@ use App\Kategori;
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/faq', 'HomeController@faq')->name('faq');
+Route::post('/faq/ask', 'HomeController@ask')->name('faq.ask');
+
 Auth::routes();
 
 // Route::get('/register', function(){

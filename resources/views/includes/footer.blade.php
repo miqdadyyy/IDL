@@ -1,32 +1,24 @@
-<div id="footerwrap">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <h4>About</h4>
-                <div class="hline-w"></div>
-                <p>Acara tahunan oleh Himasif, Himatif dan LaOS dengan kategori lomba yang ada di Gemastik</p>
-            </div>
-            <div class="col-lg-4">
-                <h4>Kontak</h4>
-                <div class="hline-w"></div>
-                <div class="col-md-9">
-                    <p>Email : idleilkom@gmail.com</p>
-                    <p>0895-3295-42125 (Ervian)</p>
-                    <p>0895-3852-50387 (Ilham)</p>
+<div class="footer-clean" style="background-color:#F3F2F0;">
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="#">E-Mail : idle@ilkom.unej.ac.id</a></li>
+                        <li><a href="#">+62812345678 (John)</a></li>
+                        <li><a href="#">+62812345678 (Doe)</a></li>
+                    </ul>
                 </div>
-
-                <div class="col-md-3">
-                    <p><a href="https://www.instagram.com/idleague_ilkom/"><i class="fa fa-instagram"></i></a></p>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Alamat</h3>
+                    <p style="color: rgb(111,112,113);">Jl. Kalimantan No.37, Krajan Timur, Sumbersari, Kabupaten Jember, Jawa Timur 68121</p>
+                </div>
+                <div class="col-sm-4 col-md-3 item"></div>
+                <div class="col-lg-3 item social"><img src="{{asset('assets/img/logo_idle.png')}}" style="height: 92px;">
+                    <p class="copyright">Copyright &copy; IDLe  2020</p>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <h4>Alamat</h4>
-                <div class="hline-w"></div>
-                <p>
-                    Jl. Kalimantan No.37, Krajan Timur, Sumbersari, Kabupaten Jember, Jawa Timur 68121
-                </p>
-            </div>
-
         </div>
-    </div>
+    </footer>
 </div>

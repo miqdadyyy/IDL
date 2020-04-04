@@ -12,12 +12,6 @@
         </div>
         <!-- /container -->
     </div>
-    <!-- /blue -->
-
-
-    <!-- *****************************************************************************************************************
-       BLOG CONTENT
-       ***************************************************************************************************************** -->
 
     <div class="container mtb">
         <div class="row">
@@ -43,7 +37,7 @@
 
                     </table>
                 @else
-                    <h3 style="text-align: center; opacity: 0.4">Belum peserta dalam
+                    <h3 style="text-align: center; opacity: 0.4">Belum ada peserta dalam
                         kategori {{ $kategori->nama_kategori }}</h3>
                 @endif
             </div>
