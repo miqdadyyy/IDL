@@ -9,6 +9,7 @@
           margin-bottom: 25pt;
         }
     </style>
+    <link rel="stylesheet" href="{{ asset('assets/css/feed.css') }}">
 @endsection
 
 @section('content')
@@ -70,27 +71,33 @@
                 <h1 class="text-center" style="color: rgb(0,0,0);font-family: Nunito, sans-serif;font-weight: bold;">Berita Terbaru</h1>
             </div>
             <div class="col-lg-12">
-                @if(count($posts) > 0)
-                    @foreach($posts as $post)
-                        <a href="{{ route('post.show', ['post' => $post->id]) }}"><h3
-                                    class="ctitle">{{ $post->title }}</h3></a>
-                        <p>
-                            <csmall>Tanggal: {{ date('d/m/Y - H:i', strtotime($post->created_at)) }}</csmall>
-                            |
-                            <csmall2>Oleh: {{ $post->user->name }}</csmall2>
-                        </p>
-                        {!! strip_tags(substr($post->description, 0, 100)) !!}
+              <section class="feeds row">
+              @if(count($posts) > 0)
+                  @foreach($posts as $post)
 
-                        <p><a href="{{ route('post.show', ['post' => $post->id]) }}">[Read More]</a></p>
-                        <div class="hline"></div>
-                        <div class="spacing"></div>
-                    @endforeach
-                @else
-                    <h3 style="text-align: center; opacity: 0.4">Belum ada berita yang dibuat</h3>
-                @endif
+                        <article class="feed feed">
+                            <div class="feed__img"></div>
+                            <a href="{{ route('post.show', ['post' => $post->id]) }}" class="feed_link">
+                              @if( $post->tumbnail != null )
+                                <div class="feed__img--hover" style="background-image: url('{{$post->tumbnail}}')"></div>
+                              @else
+                                <div class="feed__img--hover" style="background-image: url('{{asset('assets/img/kategori/'.$post->kategori.'.jpg')}}')"></div>
+                              @endif
+                             </a>
+                            <div class="feed__info">
+                              <span class="feed__category">{{ $post->kategori }}</span>
+                              <h3 class="feed__title">{{ $post->title }}</h3>
+                              <span class="feed__by">by <a href="#" class="feed__author" title="author">{{ $post->user->name }}</a></span>
+                            </div>
+                        </article>
+                  @endforeach
+                  </section>
+              @else
+                  <h3 style="text-align: center; opacity: 0.4">Belum ada berita yang dibuat</h3>
+              @endif
+              {{ $posts->links() }}
+
             </div>
-
-            {{ $posts->links() }}
         </div>
     </div>
 
@@ -98,7 +105,7 @@
             <div class="d-flex flex-row justify-content-center">
                 <img class="events" src="{{asset('assets/img/bits.png')}}" alt="">
                 <img class="events" src="{{asset('assets/img/itec.png')}}" alt="">
-                <img class="events" src="{{asset('assets/img/logo_idle.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/icom.png')}}" alt="">
                 <img class="events" src="{{asset('assets/img/laos_arena.png')}}" alt="">
             </div>
     </div>

@@ -105,7 +105,7 @@ class TimController extends Controller
     }
 
     public function tandai($id)
-    {   
+    {
         $tim = Tim::with('pesertas')->findOrFail($id);
         if($tim->starred == 0){
             if($tim->update(['starred' => 1])){

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use App\Charts\DoughnutChart;
+use Illuminate\Http\Request;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -37,5 +39,20 @@ class AdminController extends Controller
         $totalTimChart->dataset('Total Tim', 'pie', $dataTotalTim["value"])->color($dataTotalTim["color"]);
 
         return view('admin.pages.dashboard', compact('totalTimChart', 'totalPesertaChart'));
+    }
+    public function ChangePassword(){
+      return view('auth.passwords.change');
+    }
+    public function PostPassword(Request $request){
+        $id = $request['user'];
+        $user = User::findOrFail($id);
+        if( $user && strlen($request['password'])>= 8 ){
+            $user->update([
+              'password' => Hash::make($request['password']),
+            ]);
+            return redirect()->route('admin.dashboard')->with('success', 'Kata sandi berhasil diubah');
+        }else{
+            return redirect()->route('admin.dashboard')->with('error', 'Kesalahan dalam mengubah sandi');
+        }
     }
 }

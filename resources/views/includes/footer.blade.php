@@ -5,9 +5,11 @@
                 <div class="col-sm-4 col-md-3 item">
                     <h3>Kontak</h3>
                     <ul>
-                        <li><a href="#">E-Mail : idle@ilkom.unej.ac.id</a></li>
-                        <li><a href="#">+62812345678 (John)</a></li>
-                        <li><a href="#">+62812345678 (Doe)</a></li>
+                        <li><a href="mailto:humas@idle.ilkom.unej.ac.id">E-Mail : humas@idle.ilkom.unej.ac.id</a></li>
+                        <li><a href="/faq#tanya">6281330229995 (Vira)</a></li>
+                        <li><a href="/faq#tanya">6282331039424 (Mahesa)</a></li>
+                        <li><a href="/faq#tanya">6281282356874 (Dandy)</a></li>
+                        <li><a href="/faq#tanya">6282339875023 (Ersandy)</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 item">

@@ -18,6 +18,14 @@
 {{--Content--}}
 
 @section('content')
+    @if($message = Session::get('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{ $message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
@@ -36,7 +44,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="file" name="file">
+                        <input type="file" name="file" required>
                     </div>
 
                     <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Upload

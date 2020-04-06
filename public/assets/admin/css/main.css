@@ -6583,7 +6583,7 @@ button.bg-dark:focus {
 }
 
 .rounded-circle, .app-sidebar__user-avatar {
-  border-radius: 50% !important;
+  border-radius: 15% !important;
 }
 
 .rounded-0 {

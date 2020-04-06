@@ -9,6 +9,8 @@ use App\Peserta;
 use App\Tim;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\ParticipationMail;
+use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
@@ -65,6 +67,30 @@ class MailController extends Controller
                         ->to($email)
                         ->subject('Pesan dari IDLe');
                 });
+            }
+        }
+        return redirect()->route('admin.mail.page')->with('success', 'Pesan berhasil dikirim');
+    }
+
+    public function sendMailTimParticipation(Request $request)
+    {
+        $text = $request->pesan;
+        $data = [
+                'pengirim'=> strtolower(Auth::user()->name) . '@idle.ilkom.unej.ac.id'
+                ];
+        foreach ($request->tims as $t) {
+            $tim = Tim::with('pesertas.mahasiswa')
+                ->findOrFail($t);
+            $data['tim'] = $tim;
+            $data['kategori'] = $tim->kategori->nama_kategori;
+            $mahasiswa= [];
+            foreach ($tim->pesertas as $peserta) {
+              array_push($mahasiswa, $peserta->mahasiswa);
+            }
+            $data['peserta'] = $mahasiswa;
+            foreach ($tim->pesertas as $peserta) {
+              $email = $peserta->mahasiswa->email;
+              Mail::to($email)->send(new ParticipationMail([$data]));
             }
         }
         return redirect()->route('admin.mail.page')->with('success', 'Pesan berhasil dikirim');

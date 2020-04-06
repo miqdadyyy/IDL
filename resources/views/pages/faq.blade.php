@@ -11,6 +11,14 @@
     border-radius: 10px;
     padding: 25px 10%;
   }
+
+  small{
+    color: var(--primer);
+  }
+  .btn-link,
+  .btn-link:hover{
+    color: var(--primer);
+  }
 </style>
 @endsection
 
@@ -36,7 +44,7 @@
                 <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q1" aria-expanded="true" aria-controls="collapseOne">
-                        Q1: Apa itu IDLe?
+                        Q: Apa itu IDLe?
                       </button>
                     </h5>
                 </div>
@@ -49,7 +57,7 @@
                 <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q2" aria-expanded="true" aria-controls="collapseOne">
-                        Q2: Pertanyaan #2
+                        Q: Apa keuntungan yang didapat dari mengikuti IDLe?
                       </button>
                     </h5>
                 </div>
@@ -62,7 +70,7 @@
                 <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q3" aria-expanded="true" aria-controls="collapseOne">
-                        Q3: Pertanyaan #3
+                        Q: Bagaimana cara mendaftar sebagai peserta IDLe?
                       </button>
                     </h5>
                 </div>
@@ -154,7 +162,7 @@
        </div>
    </div>
 
-   <div class="card" style="margin-top: 10px;">
+   <div class="card" style="margin-top: 10px;" id="tanya">
        <div class="card-body">
            <h2>Belum menemukan jawaban yang tepat?</h2>
            <small>Kirim pesan via Whatsapp</small>

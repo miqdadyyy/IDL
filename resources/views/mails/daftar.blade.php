@@ -15,7 +15,7 @@
     @if($kategori->kategori == 'cpc' || $kategori->kategori == 'ctf')
         <p>Silahkan tunggu informasi selanjutnya dari email</p>
     @else
-        <p>Silahkan submit ke karya tulis dengan klik tombol dibawah : </p>
+        <p>Silahkan submit karya tulis dengan klik tombol dibawah : </p>
         @include('beautymail::templates.sunny.contentEnd')
         @include('beautymail::templates.sunny.button', [
         	'title' => 'Submit',

@@ -8,7 +8,7 @@
   background: transparent;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 880px) {
   .bg-dark {
     min-height: 120px;
     transition: .30s all ease-in;
@@ -29,10 +29,10 @@
 }
 
 .navitem, .nav-link {
-  color: #54b77a;
+  color: var(--primer);
   font-size: 1.2rem;
 }
 
 .navitem:hover {
-  color: #f27139;
+  color: var(--primer);
 }

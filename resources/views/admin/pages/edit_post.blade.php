@@ -22,7 +22,7 @@
 {{--App Title--}}
 
 @section('app-title', 'Post')
-@section('app-description', 'Create Post')
+@section('app-description', 'Edit Post')
 
 {{--Content--}}
 
@@ -41,7 +41,26 @@
                             Judul
                         </small>
                     </div>
-
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="titlePost">Category</label>
+                                <select class="form-control" name="kategori">
+                                      <option value="0"disabled>--Select Category--</option>
+                                      <option value="Umum">Umum</option>
+                                    @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
+                                      <option value="{{$kategori->kategori}}" @if( $post->kategori == $kategori->kategori ) selected  @endif >
+                                        {{$kategori->nama_kategori}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-9">
+                                <label for="tumbnail">Tumbnail URL</label>
+                                <input class="form-control" id="tumbnail" type="text" aria-describedby="tumbnail" name="tumbnail" value="{{ $post->tumbnail }}"
+                                       placeholder="Image URL for Tumbnail">
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="postDescription">Description</label>
                         <textarea class="form-control" name="description" rows="10" required id="editor">{{ $post->description }}</textarea>

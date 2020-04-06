@@ -49,6 +49,8 @@ Route::get('/test', function (){
 Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'middleware' =>['auth']], function(){
 
     Route::get('/', 'AdminController@index')->name('dashboard');
+    Route::get('chpwd', 'AdminController@ChangePassword')->name('chpwd');
+    Route::post('chpwd', 'AdminController@PostPassword')->name('post.chpwd');
 
     Route::resource('mahasiswa', 'MahasiswaController');
     Route::resource('tim', 'TimController');
@@ -62,7 +64,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::group(['middleware' => ['ormawa']], function (){
 
 
-//        Route::get('penyisihan-1/create/{kategori}', 'KompetisiPenyisihan1@create')->name('penyisihan-1.create');
+       // Route::get('penyisihan-1/create/{kategori}', 'KompetisiPenyisihan1@create')->name('penyisihan-1.create');
         Route::post('penyisihan-1/store/{kategori}', 'KompetisiPenyisihan1@store')->name('penyisihan-1.store');
         Route::post('penyisihan-1/update/{kategori}', 'KompetisiPenyisihan1@update')->name('penyisihan-1.update');
         Route::get('penyisihan-1/{kategori}', 'KompetisiPenyisihan1@index')->name('penyisihan-1.index');
@@ -101,6 +103,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin', 'mi
     Route::get('mail/', 'MailController@getMailPage')->name('mail.page');
     Route::post('mail/mahasiswa', 'MailController@sendMailMahasiswa')->name('mail.mahasiswa');
     Route::post('mail/tim', 'MailController@sendMailTim')->name('mail.tim');
+    Route::post('mail/tim-p', 'MailController@sendMailTimParticipation')->name('mail.tim-participation');
 
     Route::get('export/penyisihan-1/{kategori}', 'ExportExcelController@exportPenyisihan1')->name('export.penyisihan-1');
     Route::get('export/penyisihan-2/{kategori}', 'ExportExcelController@exportPenyisihan2')->name('export.penyisihan-2');

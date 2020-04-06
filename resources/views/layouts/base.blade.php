@@ -29,11 +29,6 @@
     <!-- Bootstrap CSS File -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/--mp---navbar-shrinking-on-scroll.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Article-Clean.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Article-List.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Contact-Form-Clean.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Footer-Clean.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Header-Blue.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/Horizontal-scrolling-cards-for-mobile-apps.css') }}">
 
     <!-- Libraries CSS Files -->
@@ -79,6 +74,15 @@
 <script src="{{ asset('assets/js/main.js') }}"></script>
 
 <script>
+    toastr.options = {
+      "closeButton": true,
+      "progressBar": true,
+      "showDuration": "5000",
+      "hideDuration": "300",
+      "timeOut": "5000",
+      "extendedTimeOut": "3000"
+    }
+
     @if($message = Session::get('error'))
     toastr.error('{{ $message }}', 'Error')
     @endif

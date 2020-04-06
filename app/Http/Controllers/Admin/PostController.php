@@ -42,7 +42,9 @@ class PostController extends Controller
     {
         $title = $request->title;
         $desc = $request->description;
-        Post::createPost($title, $desc);
+        $kategori = $request->kategori;
+        $tumbnail = $request->tumbnail;
+        Post::createPost($title, $desc, $kategori, $tumbnail);
 
         // TODO : Redirect to admin index post
         return redirect()->route('admin.post.index');
@@ -87,9 +89,11 @@ class PostController extends Controller
     {
         $title = $request->title;
         $desc = $request->description;
+        $kategori = $request->kategori;
+        $tumbnail = $request->tumbnail;
         $id = $post->id;
 
-        $post = Post::updatePost($id, $title, $desc);
+        $post = Post::updatePost($id, $title, $desc, $kategori, $tumbnail);
         if(!$post){
             // TODO : Return if post not found
             return redirect()->route('admin.post.index');

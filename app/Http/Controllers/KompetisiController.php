@@ -29,13 +29,45 @@ class KompetisiController extends Controller
 
     public function getPesertasByCategory($kategori)
     {
+        /*
+            PPL 1
+            Game 2
+            BisTik 3
+            SmartCity 4
+            UIUX 5
+            IOT 6
+            CPC 7
+            CTF 8
+            PKMGO 9
+            KTI 10
+        */
+        /*  ========= Kendali Tahapan Perlombaan =========
+         *  isikan pada array sesuai id tahapan lomba.
+        */
+        $kat_final = [];
+        $kat_2 = [];
+
+
+
         $kategoris = Kategori::get();
         $kategori = Kategori::where('kategori', $kategori)->get()->first();
-        $tims = Tim::with('nilais')->where('id_kategori', $kategori->id)->paginate(20);
+
+        $babak = 1;
+
+        if(in_array($kategori->id, $kat_2)){
+            $babak = 2;
+        } else if(in_array($kategori->id, $kat_final)){
+            $babak = 3;
+        }
+
+        $tims = Tim::with('nilais')->where('id_kategori', $kategori->id)->where('babak', $babak)
+            ->paginate(20);
 
         foreach ($tims as $tim){
-            $tim->nilai = end($tim->nilais);
+          if(count($tim->nilais) != 0){
+          $tim->nilai = [$tim->nilais[count($tim->nilais)-1]];
+          }
         }
-        return view('pages.peserta', compact('kategoris', 'tims', 'kategori'));
+        return view('pages.peserta', compact('kategoris', 'tims', 'kategori', 'babak'));
     }
 }

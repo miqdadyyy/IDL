@@ -41,7 +41,25 @@
                             For Post title
                         </small>
                     </div>
-
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="titlePost">Category</label>
+                                <select class="form-control" name="kategori">
+                                      <option value="0"disabled>--Select Category--</option>
+                                      <option value="Umum" selected>Umum</option>
+                                    @foreach(\App\Kategori::where('id_ormawa', \Illuminate\Support\Facades\Auth::user()->id_ormawa)->get() as $kategori)
+                                      <option value="{{$kategori->kategori}}">{{$kategori->nama_kategori}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-9">
+                                <label for="tumbnail">Tumbnail URL</label>
+                                <input class="form-control" id="tumbnail" type="text" aria-describedby="tumbnail" name="tumbnail"
+                                       placeholder="Image URL for Tumbnail">
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="postDescription">Description</label>
                         <textarea class="form-control" name="description" rows="10" id="editor" required></textarea>
