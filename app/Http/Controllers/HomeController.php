@@ -41,7 +41,7 @@ class HomeController extends Controller
 
     public function ask(Request $request)
     {
-        $no_bits = '6281330229995';     $no_itec = '6282331039424';
+        $no_bits = '6282245482429';     $no_itec = '6282331039424';
         $no_icom = '6281282356874';     $no_laosarena = '6282339875023';
 
         $URl = "api.whatsapp.com/send?phone=%T%&text=%M%";
