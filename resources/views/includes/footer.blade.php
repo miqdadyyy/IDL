@@ -6,7 +6,7 @@
                     <h3>Kontak</h3>
                     <ul>
                         <li><a href="mailto:humas@idle.ilkom.unej.ac.id">E-Mail : humas@idle.ilkom.unej.ac.id</a></li>
-                        <li><a href="/faq#tanya">6281330229995 (Vira)</a></li>
+                        <li><a href="/faq#tanya">6282245482429 (Elsadora)</a></li>
                         <li><a href="/faq#tanya">6282331039424 (Mahesa)</a></li>
                         <li><a href="/faq#tanya">6281282356874 (Dandy)</a></li>
                         <li><a href="/faq#tanya">6282339875023 (Ersandy)</a></li>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-sm-4 col-md-3 item"></div>
                 <div class="col-lg-3 item social"><img src="{{asset('assets/img/logo_idle.png')}}" style="height: 92px;">
-                    <p class="copyright">Copyright &copy; IDLe  2020</p>
+                    <p class="copyright">Copyright &copy; IDLe  2021</p>
                 </div>
             </div>
         </div>
