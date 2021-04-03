@@ -22,10 +22,10 @@
                   <p style="color: rgba(0,0,0,0.8);font-family: Nunito, sans-serif;">Powered by</p>
                   <div style="margin-top: -31px;">
                       <div class="row">
-                          <div class="col-3 col-md-3" style="padding-right: 0px;padding-left: 0px;"><img src="assets/img/himasif.png" style="height: 80px;"></div>
-                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/himatif.png" style="height: 87px;"></div>
-                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/hmif.png" style="height: 87px;"></div>
-                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/laos.png" style="height: 71px;"></div>
+                          <div class="col-3 col-md-3" style="padding-right: 0px;padding-left: 0px;"><img src="assets/img/HIMASIF.png" style="height: 80px;"></div>
+                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/HIMATIF.png" style="height: 87px;"></div>
+                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/HMIF.png" style="height: 87px;"></div>
+                          <div class="col-3 col-md-3" style="padding-left: 0px;padding-right: 0px;"><img src="assets/img/LAOS.png" style="height: 71px;"></div>
                       </div>
                   </div>
                   <a href="/faq" class="btn btn-success shadow" data-bs-hover-animate="pulse" style="margin-top: 13px;"> Tentang IDLe</a>
@@ -103,10 +103,10 @@
 
     <div class="box-event">
             <div class="d-flex flex-row justify-content-center">
-                <img class="events" src="{{asset('assets/img/bits.png')}}" alt="">
-                <img class="events" src="{{asset('assets/img/itec.png')}}" alt="">
-                <img class="events" src="{{asset('assets/img/icom.png')}}" alt="">
-                <img class="events" src="{{asset('assets/img/laos_arena.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/BITS.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/ITEC.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/ICOM.png')}}" alt="">
+                <img class="events" src="{{asset('assets/img/LAOS_ARENA.png')}}" alt="">
             </div>
     </div>
 @endsection

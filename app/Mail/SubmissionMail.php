@@ -31,7 +31,7 @@ class SubmissionMail extends Mailable
      */
     public function build()
     {
-        $sender = Auth::user()->name . '@' . 'idl.ilkom.unej.ac.id';
+        $sender = Auth::user()->name . '@' . 'idle-2021.me';
         return $this->from($sender)
             ->view('mails.submission');
 //            ->with([

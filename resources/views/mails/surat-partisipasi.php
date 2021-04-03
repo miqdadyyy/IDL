@@ -14,6 +14,6 @@
       @endforeach
       </ul>
     <p>Harap simpan email ini sebagai bukti saat penilaian project UAS.</p>
-    <p>Tertanda,<br><br><b>Panitia IDLE 2020</b></p>
+    <p>Tertanda,<br><br><b>Panitia IDLE 2021</b></p>
   </body>
 </html>

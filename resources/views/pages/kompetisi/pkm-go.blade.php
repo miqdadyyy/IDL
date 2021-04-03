@@ -42,28 +42,13 @@
                </div>
                <div class="col-auto col-md-6">
                    <p class="text-justify">
-                     PKM GO merupakan ajang Program Kreatifitas Mahasiswa yang diadakan oleh Himpunan Mahasiswa Sistem Informasi dengan sasaran seluruh mahasiswa fakultas ilmu komputer. kegiatan ini diadakan dengan tujuan untuk meningkatkan mutu mahasiswa dalam menerapkan , mengembangkan dan menyebarluaskan pengetahuan, teknologi/kesenian serta memperkaya budaya nasional. Kegiatan ini juga bertujuan untuk menyaring ide-ide kreatif mahasiswa Fasilkom yang dituangkan dalam bentuk karya tulis ilmiah yang diharapkan mampu membawa Fasilkom dalam ajang Pekan Ilmiah Mahasiswa Nasional 2019. Kompetisi karya tulis ini memiliki 8 bidang yakni PKM-P, PKM-K, PKM-M, PKM-T, PKM-KC, PKM-AI, PKM-GT, PKM-GFK.
+                     PKM GO merupakan ajang Program Kreatifitas Mahasiswa yang diadakan oleh Himpunan Mahasiswa Sistem Informasi dengan sasaran seluruh mahasiswa fakultas ilmu komputer. kegiatan ini diadakan dengan tujuan untuk meningkatkan mutu mahasiswa dalam menerapkan , mengembangkan dan menyebarluaskan pengetahuan, teknologi/kesenian serta memperkaya budaya nasional. Kegiatan ini juga bertujuan untuk menyaring ide-ide kreatif mahasiswa Fasilkom yang dituangkan dalam bentuk karya tulis ilmiah yang diharapkan mampu membawa Fasilkom dalam ajang Pekan Ilmiah Mahasiswa Nasional. Kompetisi karya tulis ini memiliki 4 bidang yakni PKM-R, PKM-K, PKM-KC, PKM-PM.
                      </p>
                      <b>Rule Book:</b><br>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-AI.pdf') }}">PKM-AI</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-GFK.pdf') }}">PKM-GFK</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-GT.pdf') }}">PKM-GT</a>
+                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-R.pdf') }}">PKM-R</a>
                      <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-K.pdf') }}">PKM-K</a>
                      <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-KC.pdf') }}">PKM-KC</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-M.pdf') }}">PKM-M</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-P.pdf') }}">PKM-P</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-T.pdf') }}">PKM-T</a>
-                     <br><b>Lampiran:</b><br>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-AI.pdf') }}">PKM-AI</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-GFK.pdf') }}">PKM-GFK</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-GT.pdf') }}">PKM-GT</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-K.pdf') }}">PKM-K</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-KC.pdf') }}">PKM-KC</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-M.pdf') }}">PKM-M</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-P.pdf') }}">PKM-P</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/template/PKM-T.pdf') }}">PKM-T</a>
-                     <br><b>Template:</b><br>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-AI.pdf') }}">Template</a>
+                     <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/PKM-PM.pdf') }}">PKM-PM</a>
                      <br><b>Daftar Peserta:</b><br>
                      <a class="btn btn-success shadow" href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}">Daftar Peserta</a>
                </div>
@@ -72,6 +57,9 @@
         </div>
        <div data-bs-parallax-bg="true" class="register-img">
             <form method="post" class="register-form" action="{{ route('kompetisi.store', ['kategori' => $kategori->id]) }}" method="POST">
+              <h1 class="text-center" style="font-family: Nunito, sans-serif;font-weight: bold;color: rgb(255,255,255);">Pendaftaran kompetisi {{ $kategori->nama_kategori }} belum dibuka! <br>
+              Akan dibuka pada tanggal 22 April 2021</h1>
+              <!--
                 @csrf
                 <input type="hidden" value="{{ $kategori->id }}" name="kategori">
                 <h2 class="text-center" style="font-family: Nunito, sans-serif;font-weight: bold;color: rgb(255,255,255);">Pendaftaran</h2>
@@ -157,6 +145,7 @@
                     </div>
                 </div>
                 <div class="text-center" ><button class="btn btn-success" id="reg-submit" type="submit">Daftar</button></div>
+              -->
             </form>
         </div>
 @endsection

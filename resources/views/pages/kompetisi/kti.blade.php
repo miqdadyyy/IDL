@@ -47,7 +47,7 @@
                        sections 1.10.32 and 1.10.33 of "de Finibus Bonorum<br>
                      </p>
                      <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/'.$kategori->kategori.'.pdf') }}">Rule Book</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/template/#.pdf') }}">Template</a>
+                     <a class="btn btn-success shadow" href="{{ asset('assets/template/'.$kategori->kategori.'.docx') }}">Template</a>
                      <a class="btn btn-success shadow" href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}">Daftar Peserta</a>
                </div>
            </div>

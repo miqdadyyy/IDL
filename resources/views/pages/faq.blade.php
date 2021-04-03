@@ -40,121 +40,318 @@
        ***************************************************************************************************************** -->
    <div class="card">
        <div class="card-body">
-            <div id="accordion">
-                <div class="card-header">
+            <div id="accordion"> 
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q1" aria-expanded="true" aria-controls="collapseOne">
-                        Q: Apa itu IDLe?
+                        BITS: Apa sih BITS 2021 itu?
                       </button>
                     </h5>
                 </div>
                 <div id="Q1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      BITS 2021 (Bulan IT Sistem Informasi) merupakan serangkaian ajang kompetisi di bidang IT tingkat Fakultas yang diselenggarakan oleh Himpunan Mahasiswa Sistem Informasi yang akan diadakan pada tahun 2021.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q2" aria-expanded="true" aria-controls="collapseOne">
-                        Q: Apa keuntungan yang didapat dari mengikuti IDLe?
+                        BITS: Acara apa saja yang akan diadakan oleh BITS 2021 ini?
                       </button>
                     </h5>
                 </div>
                 <div id="Q2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      BITS 2021 ini akan mengadakan acara ISIC dan PKM Go untuk mengisi kegiatan BITS 2021 ini.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q3" aria-expanded="true" aria-controls="collapseOne">
-                        Q: Bagaimana cara mendaftar sebagai peserta IDLe?
+                        BITS: Apa perbedaan ISIC dan PKM Go?
                       </button>
                     </h5>
                 </div>
                 <div id="Q3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      ISIC merupakan sebuah kompetisi bidang IT yang bisa menjadi wadah untuk mahasiswa Fakultas Ilmu Komputer agar dapat melakukan proses uji kompetensi ide-ide mereka secara intensif dan juga teratur dalam lingkup fakultas ilmu komputer Universitas Jember. Sedangkan PKM Go merupakan acara perlombaan di bidang Pekan Kreativitas Mahasiswa (PKM) tingkat Fakultas Ilmu Komputer Universitas Jember yang bertujuan untuk menjadi wadah sebagai media untuk menuangkan ide, mengkaji serta mengembangkan ilmu dan teknologi yang telah di pelajari di perkulihan. Untuk info lebih lengkap bisa cek instagram BITS 2021.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q4" aria-expanded="true" aria-controls="collapseOne">
-                        Q4: Pertanyaan #4
+                        BITS: Kapan pelaksanaan BITS 2021?
                       </button>
                     </h5>
                 </div>
                 <div id="Q4" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      BITS 2021 akan dilaksanakan pada tanggal 4 April - 5 Juni 2021.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q5" aria-expanded="true" aria-controls="collapseOne">
-                        Q5: Pertanyaan #5
+                        BITS: Bagaimana cara mendaftar BITS 2021?
                       </button>
                     </h5>
                 </div>
                 <div id="Q5" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      Pendaftaran dilakukan melalui Website IDLe.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q6" aria-expanded="true" aria-controls="collapseOne">
-                        Q6: Pertanyaan #6
+                        BITS: Apakah pendaftaran BITS 2021 dipungut biaya?
                       </button>
                     </h5>
                 </div>
                 <div id="Q6" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      Tidak, pendaftaran BITS 2021 ini gratis tidak dipungut biaya.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q7" aria-expanded="true" aria-controls="collapseOne">
-                        Q7: Pertanyaan #7
+                        BITS: Apakah perlombaan BITS 2021 hanya boleh diikuti oleh mahasiswa prodi Sistem Informasi?
                       </button>
                     </h5>
                 </div>
                 <div id="Q7" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      Tidak, BITS juga merupakan bagian dari IDLe, yang berarti mahasiswa fakultas ilmu komputer bisa join, silahkan lihat rulebook bagian ketentuan peserta untuk lebih jelas.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q8" aria-expanded="true" aria-controls="collapseOne">
-                        Q8: Pertanyaan #8
+                        BITS: Apa hubungannya BITS dengan Gemastik?
                       </button>
                     </h5>
                 </div>
                 <div id="Q8" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      Gemastik merupakan lomba tingkat nasional, terdapat sub lomba yang merupakan inspirasi dari lomba BITS. Adanya acara BITS juga merupakan ajang dalam mempersiapkan mahasiswa mengikuti gemastik.
                     </div>
                 </div>
-
-                <div class="card-header">
+              
+              <div class="card-header">
                     <h5 class="mb-0">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#Q9" aria-expanded="true" aria-controls="collapseOne">
-                        Q9: Pertanyaan #9
+                        BITS: Apakah template proposal sudah disediakan dan kapan dibagikan?
                       </button>
                     </h5>
                 </div>
                 <div id="Q9" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      Sudah, template akan disediakan oleh panitia dan untuk pembagian template sesuai dengan jadwal di website.
+                    </div>
+                </div>
+              
+              <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q10" aria-expanded="true" aria-controls="collapseOne">
+                        BITS: Dalam satu tim terdiri dari berapa orang?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q10" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Satu tim terdiri dari maksimal 3 orang dengan 1 mahasiswa menjadi ketua tim.
+                    </div>
+                </div>
+              
+              <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q11" aria-expanded="true" aria-controls="collapseOne">
+                        BITS: Setiap mahasiswa boleh mengikuti berapa bidang perlombaan?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q11" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Mahasiswa diberi kesempatan dengan mengikuti maksimal 3 bidang perlombaan, dengan hanya 1 kali menjadi ketua tim.
+                    </div>
+                </div>
+              
+              <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q12" aria-expanded="true" aria-controls="collapseOne">
+                        BITS: Apakah ada tema khusus dalam perlombaan BITS ini?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q12" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Tema dalam perlombaan BITS 2021 kali ini yaitu "Transformation of Technology on Pandemic Era". Untuk selengkapnya bisa dilihat di dalam rulebook.
+                    </div>
+                </div>
+              
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q13" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: ITeC itu apa sih?
+                      </button>
+                    </h5>
+                </div>
+              
+                <div id="Q13" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      ITeC memiliki kepanjangan Information Technology Competition, yang mana merupakan sebuah ajang perlombaan Karya Tulis Ilmiah bertema teknologi informasi yang diselenggarakan oleh Himpunan Mahasiswa Teknologi Informasi Fakultas Ilmu Komputer Universitas Jember.                   
+                  	</div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q14" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Kapan pelaksanaan ITeC?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q14" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      ITeC dilaksanakan mulai tanggal 4 April 2021 - 2 Mei 2021.                    
+                  	</div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q15" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Tahapannya apa saja yang ada di ITeC?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q15" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Perlombaan ITeC dilaksanakan secara bertahap mulai dari Tahap 1 (Pendaftaran dan Pengumpulan BAB 1), Tahap 2 (Pembuatan pamflet mengenai penjelasan gagasan), Tahap 3 (Pembuatan Full Proposal), Tahap 4 (Final dan Presentasi).
+                    </div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q16" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Bagaimana cara pendaftaran ITeC?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q16" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Pendaftaran dilakukan melalui Website IDLe.
+                    </div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q17" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Apakah pendaftarannya dipungut biaya?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q17" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Pendaftaran tidak dipungut biaya apapun.
+                    </div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q18" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Apakah perlombaan ini hanya dikhususkan untuk mahasiswa Teknologi Informasi saja?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q18" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Tidak, ITeC juga merupakan bagian dari IDLe, yang berarti mahasiswa fakultas ilmu komputer bisa join, silahkan lihat rulebook bagian ketentuan peserta untuk lebih jelas.
+                    </div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q19" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Apakah ada ketentuan tema dalam setiap kategori perlombaan?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q19" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Ada, UI/UX akan lebih berfokus pada membantu UMKM meningkatkan ekonomi, sementara untuk IoT bebas. Ketentuan lengkap bisa dilihat lagi di rulebook.
+                    </div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q20" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Apa hubungannya ITeC dengan gemastik?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q20" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Gemastik merupakan lomba tingkat nasional, terdapat sub lomba yang merupakan inspirasi dari lomba ITeC. Adanya acara ITeC juga merupakan ajang dalam mempersiapkan mahasiswa mengikuti gemastik.
+                    </div>
+                </div>
+
+                <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q21" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Apakah disediakan template untuk penyusunan proposal?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q21" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Iya, Template disediakan oleh panitia.
+                    </div>
+                </div>
+              
+              <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q22" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Kapan template akan dibagikan?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q22" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Sesuai dengan timeline di website IDLe.
+                    </div>
+                </div>
+              
+              <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q23" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Dalam satu tim terdiri dari berapa orang?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q23" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Setiap tim terdiri maksimal 3 orang mahasiswa dan salah satu mahasiswa bertindak sebagai ketua tim.
+                    </div>
+                </div>
+              
+              <div class="card-header">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#Q24" aria-expanded="true" aria-controls="collapseOne">
+                        ITec: Apakah peserta hanya diperbolehkan mengikuti satu bidang perlombaan saja?
+                      </button>
+                    </h5>
+                </div>
+                <div id="Q24" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Peserta diperbolehkan mengikuti maksimal 2 kategori lomba yang berbeda, tetapi hanya diperkenankan menjadi salah satu ketua tim dari kategori lomba yang diikuti.
                     </div>
                 </div>
 
@@ -166,7 +363,7 @@
        <div class="card-body">
            <h2>Belum menemukan jawaban yang tepat?</h2>
            <small>Kirim pesan via Whatsapp</small>
-           <form class="" action="{{ route('faq.ask') }}" method="post" autocomplete="off">
+           <form class="" action="{{ route('faq.ask') }}" method="post" autocomplete="off" target="_blank">
              @csrf
               <div class="form-group">
                  <label>Nama Tim</label>

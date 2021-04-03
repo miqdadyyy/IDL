@@ -81,7 +81,10 @@ class KompetisiPenyisihan1 extends Controller
 
         foreach ($mahasiswas as $mahasiswa) {
             if($mahasiswa["nim"] == null){
-                continue;
+                return redirect()->back()->with('error', 'Gagal mendaftar, karena NIM belum diisi');
+            }
+          	else if(preg_match("/[12][0789]241010[1-3][01][0-9]{2}/", $mahasiswa["nim"]) == 0){
+                return redirect()->back()->with('error', 'Gagal mendaftar, karena NIM tidak sesuai');;
             }
             $mhs = Mahasiswa::createMahasiswa($mahasiswa["nim"], $mahasiswa["nama"], $mahasiswa["email"], $mahasiswa["no_hp"]);
 
@@ -103,7 +106,7 @@ class KompetisiPenyisihan1 extends Controller
             $email = $mahasiswa["email"];
             $mailer->send('mails.daftar', compact('tim', 'kategori', 'kode'), function ($message) use ($email, $kategori) {
                 $message
-                    ->from(strtolower($kategori->ormawa->nama_ormawa) . '@idle.ilkom.unej.ac.id')
+                    ->from(strtolower($kategori->ormawa->nama_ormawa) . '@idle-2021.me')
                     ->to($email)
                     ->subject('Pendaftaran IDLe');
             });
