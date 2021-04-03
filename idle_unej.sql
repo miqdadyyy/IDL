@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 06, 2021 at 03:01 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Host: localhost
+-- Generation Time: Apr 01, 2021 at 12:48 PM
+-- Server version: 10.5.9-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `idl`
+-- Database: `idle_unej`
 --
 
 -- --------------------------------------------------------
@@ -58,6 +57,7 @@ INSERT INTO `kategoris` (`id`, `id_ormawa`, `nama_kategori`, `kategori`) VALUES
 --
 
 CREATE TABLE `mahasiswas` (
+  `id` int(11) NOT NULL,
   `nim` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -160,6 +160,13 @@ CREATE TABLE `posts` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `title`, `kategori`, `tumbnail`, `description`, `id_user`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(8, 'H-2 Pembukaan IDLe 2021', 'Umum', 'http://idle-2021.me/uploads/files/0tiGP0rPCdzApbWQeyXivomwekrGRm96tuaf1V5Z.jpeg', '<p>[H-2 Pembukaan IDLe 2021]</p><p>&nbsp;</p><p>Hallo sobat ilkom👋</p><p>Pembukaan IDLe kurang 2 hari lagiii🥳🥳</p><p>Jangan lupa hadir ya tanggal 03 April 2021 pukul 09.00 Wib🤗</p><p data-f-id=\"pbf\" style=\"text-align: center; font-size: 14px; margin-top: 30px; opacity: 0.65; font-family: sans-serif;\">Powered by <a href=\"https://www.froala.com/wysiwyg-editor?pb=1\" title=\"Froala Editor\">Froala Editor</a></p>', 1, '2021-04-01 16:15:44', '2021-04-01 16:15:44', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -175,6 +182,13 @@ CREATE TABLE `post_images` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `post_images`
+--
+
+INSERT INTO `post_images` (`id`, `url`, `thumb`, `tag`, `name`, `created_at`, `updated_at`) VALUES
+(12, '/uploads/files/0tiGP0rPCdzApbWQeyXivomwekrGRm96tuaf1V5Z.jpeg', '/uploads/files/0tiGP0rPCdzApbWQeyXivomwekrGRm96tuaf1V5Z.jpeg', NULL, NULL, '2021-04-01 12:14:36', '2021-04-01 12:14:36');
 
 -- --------------------------------------------------------
 
@@ -237,9 +251,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `id_ormawa`, `profile_pict`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Himasif', 'himasif@ilkom.com', NULL, '$2y$10$8oKrY5GljNl4sofFj7gO1ucbBvZePlQFaYoUg3KPHlDAX..SRt.AG', 1, 'assets/admin/img/profile/himasif.png', 'yHxnvFtjmxJduLARSbihrkCh9mmgY4TZ4pQqcOXmWVLlw8cC6gpPr9r8MHvs', NULL, NULL),
+(1, 'Himasif', 'himasif@ilkom.com', NULL, '$2y$10$8oKrY5GljNl4sofFj7gO1ucbBvZePlQFaYoUg3KPHlDAX..SRt.AG', 1, 'assets/admin/img/profile/himasif.png', 'Dq4XcouajfWCMBi7j3dqBUsOuQCsIuia9vIMq870GcAYGJR87xZIjGaiv0HS', NULL, NULL),
 (2, 'Himatif', 'himatif@ilkom.com', NULL, '$2y$10$IUy6Lt0T8gnWS.UjVlw5COEAY9bu.JDCNWAYZvvvkWWH1O1Yi3J1q', 2, 'assets/admin/img/profile/himatif.png', NULL, NULL, '2020-04-06 04:27:37'),
-(3, 'LaOS', 'laos@ilkom.com', NULL, '$2y$10$Iyzsxndd948OWmyP3XVVzOtZZFe8gKrPvdsbm.iRibnemGl4yvlve', 3, 'assets/admin/img/profile/laos.png', NULL, NULL, '2020-04-06 04:36:30'),
+(3, 'LaOS', 'laos@ilkom.com', NULL, '$2y$10$CQfbgrEkyrrSPVBNJhZmZe2XDKmcxQriGBFbCkKmzOJSJidgthMVK', 3, 'assets/admin/img/profile/laos.png', NULL, NULL, '2021-03-31 15:45:21'),
 (4, 'Hmif', 'hmif@ilkom.com', NULL, '$2y$10$7nOREU9kAYIUMemLoEGw.OAJQT746oo5/MgROcxvQCRpVMMQ0Rd7W', 4, 'assets/admin/img/profile/hmif.png', NULL, NULL, '2021-03-03 07:29:03');
 
 --
@@ -252,6 +266,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `id
 ALTER TABLE `kategoris`
   ADD PRIMARY KEY (`id`),
   ADD KEY `kategoris_id_ormawa_foreign` (`id_ormawa`);
+
+--
+-- Indexes for table `mahasiswas`
+--
+ALTER TABLE `mahasiswas`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `migrations`
@@ -332,6 +352,12 @@ ALTER TABLE `kategoris`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `mahasiswas`
+--
+ALTER TABLE `mahasiswas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -353,31 +379,31 @@ ALTER TABLE `penilaian`
 -- AUTO_INCREMENT for table `pesertas`
 --
 ALTER TABLE `pesertas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `post_images`
 --
 ALTER TABLE `post_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `submissions`
 --
 ALTER TABLE `submissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tims`
 --
 ALTER TABLE `tims`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `users`
