@@ -41,16 +41,15 @@
                   <img class="img-fluid float-right" data-bs-hover-animate="pulse" src="{{asset('assets/img/kategori/'.$kategori->kategori.'.jpg')}}">
                </div>
                <div class="col-auto col-md-6">
+                   <h2>IoT</h2>
+                   <hr/>
+                   <h4>Deskripsi Lomba</h4>
                    <p class="text-justify">
-                     Lomba Device Idea merupakan lomba ide perangkat keras. Lomba device Idea memiliki 3 pilihan judul tema
-                     <ul style="list-style:none">
-                       <li>a. IoT Deskripsi Lomba Lomba Interenet of Things(IoT) merupakan lomba gagasan atau ide seputar penggunaan IoT pada kehidupan sehari hari. IoT dapat mempermudah pengguna agar dapat mengontrol benda/perangkat secara langsung oleh penggunanya. Diharapka para peserta dapat merancang penggunaan IoT yang unik serta menunjang kebutuhan aktivitas pada masyarakat secara general.</li>
-                       <li>b. Embedded System Deskripsi Lomba Embedded System merupakan sistem komputer dengan tujuan khusus yang dimasukkan ke dalam alat yang ia kontrol. Diharapkan peserta dapat membuat suatu alat yang dapat mengambil input dari sensor lingkungan sekitar, nantinya piranti cerdas yang dibuat akan berkerja secara efisien</li>
-                       <li>c. Smart Device Deskripsi Lomba Smart Device merupakan suatu alat yang biasanya terhubung dengan perangkat lain menggunakan jaringan nirkabel. Peserta diharapkan mampu membuat piranti teknologi tepat guna yang bekerja secara interaktif dan otomatis serta mampu memberikan solusi untuk permasalahan yang ada di dalam masyarakat</li>
-                     </ul>
-                   </p>
+                     Internet of Things (IoT) atau Internet untuk Segalanya adalah suatu konsep dimana objek tertentu punya kemampuan untuk mentransfer data lewat jaringan tanpa memerlukan adanya interaksi dari manusia ke manusia ataupun dari manusia ke perangkat komputer. 
+Ide yang diangkat dalam kategori ini bebas, IoT mampu diterapkan pada hampir semua bidang pekerjaan manusia seperti bidang pertanian, perkebunan, kendali elektronik, dan lain-lain. 
+                     </p>
                      <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/'.$kategori->kategori.'.pdf') }}">Rule Book</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/template/#.pdf') }}">Template</a>
+                     <a class="btn btn-success shadow" href="{{ asset('assets/template/'.$kategori->kategori.'.docx') }}">Template</a>
                      <a class="btn btn-success shadow" href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}">Daftar Peserta</a>
                </div>
            </div>
@@ -142,6 +141,7 @@
                         </div>
                     </div>
                 </div>
+              	<i style="color: white;">(kosongi anggota 2 jika hanya mendaftarkan 2 peserta)</i>
                 <div class="text-center" ><button class="btn btn-success" id="reg-submit" type="submit">Daftar</button></div>
             </form>
         </div>

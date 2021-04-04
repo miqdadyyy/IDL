@@ -137,6 +137,7 @@
                         </div>
                     </div>
                 </div>
+              	<i style="color: white;">(kosongi anggota 2 jika hanya mendaftarkan 2 peserta)</i>
                 <div class="text-center" ><button class="btn btn-success" id="reg-submit" type="submit">Daftar</button></div>
             </form>
         </div>

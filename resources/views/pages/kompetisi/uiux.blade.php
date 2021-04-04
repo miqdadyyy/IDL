@@ -41,11 +41,15 @@
                   <img class="img-fluid float-right" data-bs-hover-animate="pulse" src="{{asset('assets/img/kategori/'.$kategori->kategori.'.jpg')}}">
                </div>
                <div class="col-auto col-md-6">
+                   <h2>UI/UX</h2>
+                   <hr/>
+                   <h4>Deskripsi Lomba</h4>
                    <p class="text-justify">
-                     Lomba Desain User Interface dan User Experience (UI & UX) adalah lomba desain produk yang berorientasi kepada tampilan, kenyamanan dan kemudahan (user) ketika menggunakannya. Dalam lomba ini yang menjadi acuan adalah pengalaman pengguna dalam mengoperasikan aplikasi tersebut secara menyeluruh. Para peserta merancang suatu antarmuka yang baik dengan menggunakan metode sehingga dapat menghasilkan desain aplikasi yang memiliki kualitas UI UX yang baik. 
+                     User Interface dan User Experience (UI & UX) adalah sebuah desain produk yang berorientasi kepada tampilan, kenyamanan dan kemudahan user ketika menggunakannya. Lomba desain interaksi produk yang berorientasi pada kenyamanan dan kemudahan bagi pengguna.
+Fokus utama pada kategori ini pada tahun ini adalah membantu UMKM dalam meningkatkan ekonomi. 
                      </p>
                      <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/'.$kategori->kategori.'.pdf') }}">Rule Book</a>
-                     <a class="btn btn-success shadow" href="{{ asset('assets/template/#.pdf') }}">Template</a>
+                     <a class="btn btn-success shadow" href="{{ asset('assets/template/'.$kategori->kategori.'.docx') }}">Template</a>
                      <a class="btn btn-success shadow" href="{{ route('kompetisi.peserta', ['kategori' => $kategori->kategori]) }}">Daftar Peserta</a>
                </div>
            </div>
@@ -137,6 +141,7 @@
                         </div>
                     </div>
                 </div>
+              	<i style="color: white;">(kosongi anggota 2 jika hanya mendaftarkan 2 peserta)</i>
                 <div class="text-center" ><button class="btn btn-success" id="reg-submit" type="submit">Daftar</button></div>
             </form>
         </div>
