@@ -42,9 +42,7 @@
                </div>
                <div class="col-auto col-md-6">
                    <p class="text-justify">
-                     Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-                       Virginia, looked up<br>&nbsp;one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-                       sections 1.10.32 and 1.10.33 of "de Finibus Bonorum<br>
+                   Karya Tulis Ilmiah merupakan bidang lomba yang mendorong peserta untuk mengembangkan sebuah karya tulis dalam bentuk penuangan gagasan atau ide kreatif yang bersifat visioner dan implementatif untuk mencari solusi atas permasalahan bangsa yang siap terbit dengan mengikuti kaidah penugasan ilmiah. Diharapkan peserta yang mengikuti bidang lomba ini mampu berinovasi dan menyajikan karya tulis ilmiah yang memberikan solusi dari segi TIK untuk kedaulatan bangsa.<br>
                      </p>
                      <a class="btn btn-success shadow" href="{{ asset('assets/rulebook/'.$kategori->kategori.'.pdf') }}">Rule Book</a>
                      <a class="btn btn-success shadow" href="{{ asset('assets/template/'.$kategori->kategori.'.docx') }}">Template</a>
