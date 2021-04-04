@@ -78,17 +78,37 @@ class KompetisiPenyisihan1 extends Controller
         // TODO : Validation ????
 
         $pesertas = [];
-
+		$count = 0;
+      	
         foreach ($mahasiswas as $mahasiswa) {
-            if($mahasiswa["nim"] == null){
-                return redirect()->back()->with('error', 'Gagal mendaftar, karena NIM belum diisi');
-            }
-          	else if(preg_match("/[12][0789]241010[1-3][01][0-9]{2}/", $mahasiswa["nim"]) == 0){
-                return redirect()->back()->with('error', 'Gagal mendaftar, karena NIM tidak sesuai');;
-            }
-            $mhs = Mahasiswa::createMahasiswa($mahasiswa["nim"], $mahasiswa["nama"], $mahasiswa["email"], $mahasiswa["no_hp"]);
+          	$count++;
+          	if($count <= 2) {
+                if($mahasiswa["nim"] == null ){
+                    return redirect()->back()->with('error', 'Gagal mendaftar, karena NIM belum diisi');
+                }
+                else if(preg_match("/[12][0789]241010[1-3][01][0-9]{2}/", $mahasiswa["nim"]) == 0){
+                    return redirect()->back()->with('error', 'Gagal mendaftar, karena NIM tidak sesuai');;
+                }
+                else {
+                	$mhs = Mahasiswa::createMahasiswa($mahasiswa["nim"], $mahasiswa["nama"], $mahasiswa["email"], $mahasiswa["no_hp"]);
 
-            array_push($pesertas, $mhs);
+                	array_push($pesertas, $mhs);
+                }
+            }
+          	else {
+              	if($mahasiswa["nama"] == null && $mahasiswa["nim"] == null && $mahasiswa["email"] == null && $mahasiswa["no_hp"] == null){
+                    continue;
+                }
+              	else if(preg_match("/[12][0789]241010[1-3][01][0-9]{2}/", $mahasiswa["nim"]) == 0){
+                    return redirect()->back()->with('error', 'Gagal mendaftar, karena NIM tidak sesuai');;
+                }
+              	else {
+                	$mhs = Mahasiswa::createMahasiswa($mahasiswa["nim"], $mahasiswa["nama"], $mahasiswa["email"], $mahasiswa["no_hp"]);
+
+                	array_push($pesertas, $mhs);
+                }
+              	
+            }
         }
 
         $tim = Tim::createTim($request->kategori, $pesertas[0], $request->nama_tim);
