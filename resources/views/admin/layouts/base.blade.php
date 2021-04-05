@@ -22,6 +22,9 @@
 
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  	<!-- CKEditor 4 -->
+  	<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     @yield('css')
 </head>
 <body class="app sidebar-mini rtl">
