@@ -51,6 +51,9 @@
        BLOG CONTENT
        ***************************************************************************************************************** -->
        <div class="card">
+           <a href="{{$post->tumbnail}}" class="align-self-center">
+           		<img src="{{$post->tumbnail}}" alt="" width="400">
+           </a>
            <div class="card-body" style="margin: 0 auto; width:80%;">
                <div class="row">
                    <div class="col-auto col-md-8 align-self-center blog">
