@@ -21,8 +21,17 @@
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <h3 class="tile-title">Edit Tim</h3>
-				<input type="hidden" value="{{ $tim->submissionid }}">
+                <h3 class="tile-title" onclick="copyID()">Edit Tim</h3>
+				<input id="sid" type="text" style="display:none" value="{{URL::to('/')}}/submit/{{ $tim->submissionid }}?kategori={{ $tim->kategori->kategori }}">
+				<script>
+				function copyID() {
+				  var copyText = document.getElementById("sid");
+				  copyText.select();
+				  copyText.setSelectionRange(0, 99999)
+				  document.execCommand("copy");
+				  alert("Url Disalin: " + copyText.value);
+				}
+				</script>
                 <form method="post" action="{{ route('admin.tim.update', ['tim' => $tim->id]) }}">
                     @csrf
                     @method('PATCH')
