@@ -22,6 +22,7 @@
         <div class="col-md-12">
             <div class="tile">
                 <h3 class="tile-title">Edit Tim</h3>
+				<input type="hidden" value="{{ $tim->submissionid }}">
                 <form method="post" action="{{ route('admin.tim.update', ['tim' => $tim->id]) }}">
                     @csrf
                     @method('PATCH')
